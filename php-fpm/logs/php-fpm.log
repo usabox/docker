@@ -1,0 +1,221 @@
+[12-Sep-2017 08:32:13] NOTICE: fpm is running, pid 5
+[12-Sep-2017 08:32:13] NOTICE: ready to handle connections
+[12-Sep-2017 08:38:12] NOTICE: fpm is running, pid 7
+[12-Sep-2017 08:38:12] NOTICE: ready to handle connections
+[12-Sep-2017 08:38:49] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (98)
+[12-Sep-2017 08:38:49] ERROR: FPM initialization failed
+[12-Sep-2017 08:45:12] NOTICE: fpm is running, pid 23
+[12-Sep-2017 08:45:12] NOTICE: ready to handle connections
+[12-Sep-2017 09:09:50] NOTICE: fpm is running, pid 5
+[12-Sep-2017 09:09:50] NOTICE: ready to handle connections
+[12-Sep-2017 09:11:25] NOTICE: fpm is running, pid 11
+[12-Sep-2017 09:11:25] NOTICE: ready to handle connections
+[12-Sep-2017 09:19:23] NOTICE: fpm is running, pid 5
+[12-Sep-2017 09:19:23] NOTICE: ready to handle connections
+[12-Sep-2017 09:20:26] NOTICE: fpm is running, pid 5
+[12-Sep-2017 09:20:26] NOTICE: ready to handle connections
+[12-Sep-2017 09:20:55] NOTICE: fpm is running, pid 6
+[12-Sep-2017 09:20:55] NOTICE: ready to handle connections
+[12-Sep-2017 09:21:03] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (98)
+[12-Sep-2017 09:21:03] ERROR: FPM initialization failed
+[12-Sep-2017 09:26:56] NOTICE: fpm is running, pid 5
+[12-Sep-2017 09:26:56] NOTICE: ready to handle connections
+[12-Sep-2017 09:27:31] NOTICE: fpm is running, pid 6
+[12-Sep-2017 09:27:31] NOTICE: ready to handle connections
+[12-Sep-2017 09:33:05] NOTICE: fpm is running, pid 5
+[12-Sep-2017 09:33:05] NOTICE: ready to handle connections
+[12-Sep-2017 11:14:07] NOTICE: fpm is running, pid 5
+[12-Sep-2017 11:14:07] NOTICE: ready to handle connections
+[12-Sep-2017 11:14:49] NOTICE: fpm is running, pid 5
+[12-Sep-2017 11:14:49] NOTICE: ready to handle connections
+[12-Sep-2017 11:16:01] NOTICE: fpm is running, pid 6
+[12-Sep-2017 11:16:01] NOTICE: ready to handle connections
+[12-Sep-2017 11:16:06] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (98)
+[12-Sep-2017 11:16:06] ERROR: FPM initialization failed
+[12-Sep-2017 11:41:16] NOTICE: fpm is running, pid 5
+[12-Sep-2017 11:41:16] NOTICE: ready to handle connections
+[12-Sep-2017 11:41:49] NOTICE: fpm is running, pid 5
+[12-Sep-2017 11:41:49] NOTICE: ready to handle connections
+[12-Sep-2017 11:42:15] NOTICE: fpm is running, pid 9
+[12-Sep-2017 11:42:15] NOTICE: ready to handle connections
+[12-Sep-2017 11:46:37] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (98)
+[12-Sep-2017 11:46:37] ERROR: FPM initialization failed
+[12-Sep-2017 12:01:36] NOTICE: fpm is running, pid 6
+[12-Sep-2017 12:01:36] NOTICE: ready to handle connections
+[12-Sep-2017 12:02:10] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (98)
+[12-Sep-2017 12:02:10] ERROR: FPM initialization failed
+[12-Sep-2017 12:27:18] NOTICE: fpm is running, pid 5
+[12-Sep-2017 12:27:18] NOTICE: ready to handle connections
+[12-Sep-2017 12:27:50] NOTICE: fpm is running, pid 5
+[12-Sep-2017 12:27:50] NOTICE: ready to handle connections
+[12-Sep-2017 12:28:23] NOTICE: fpm is running, pid 6
+[12-Sep-2017 12:28:23] NOTICE: ready to handle connections
+[12-Sep-2017 12:54:38] NOTICE: fpm is running, pid 7
+[12-Sep-2017 12:54:38] NOTICE: ready to handle connections
+[12-Sep-2017 13:05:56] NOTICE: fpm is running, pid 1
+[12-Sep-2017 13:05:56] NOTICE: ready to handle connections
+[13-Sep-2017 02:50:25] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:50:25] NOTICE: ready to handle connections
+[13-Sep-2017 02:54:03] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:54:03] NOTICE: ready to handle connections
+[13-Sep-2017 02:55:21] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:55:21] NOTICE: ready to handle connections
+[13-Sep-2017 02:57:00] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:57:00] NOTICE: ready to handle connections
+[13-Sep-2017 02:57:03] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:57:03] NOTICE: ready to handle connections
+[13-Sep-2017 02:58:17] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:58:17] NOTICE: ready to handle connections
+[13-Sep-2017 02:58:20] NOTICE: fpm is running, pid 1
+[13-Sep-2017 02:58:20] NOTICE: ready to handle connections
+[13-Sep-2017 03:17:17] NOTICE: fpm is running, pid 1
+[13-Sep-2017 03:17:17] NOTICE: ready to handle connections
+[13-Sep-2017 03:40:58] NOTICE: Terminating ...
+[13-Sep-2017 03:40:58] NOTICE: exiting, bye-bye!
+[13-Sep-2017 03:41:19] NOTICE: fpm is running, pid 1
+[13-Sep-2017 03:41:19] NOTICE: ready to handle connections
+[13-Sep-2017 06:46:15] NOTICE: Terminating ...
+[13-Sep-2017 06:46:15] NOTICE: exiting, bye-bye!
+[13-Sep-2017 06:49:40] NOTICE: fpm is running, pid 1
+[13-Sep-2017 06:49:40] NOTICE: ready to handle connections
+[13-Sep-2017 06:52:04] NOTICE: Terminating ...
+[13-Sep-2017 06:52:04] NOTICE: exiting, bye-bye!
+[13-Sep-2017 06:55:30] NOTICE: fpm is running, pid 1
+[13-Sep-2017 06:55:30] NOTICE: ready to handle connections
+[13-Sep-2017 11:26:49] NOTICE: Terminating ...
+[13-Sep-2017 11:26:49] NOTICE: exiting, bye-bye!
+[13-Sep-2017 11:35:05] NOTICE: fpm is running, pid 1
+[13-Sep-2017 11:35:05] NOTICE: ready to handle connections
+[13-Sep-2017 12:10:57] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:10:57] NOTICE: ready to handle connections
+[13-Sep-2017 12:12:12] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:12:12] NOTICE: ready to handle connections
+[13-Sep-2017 12:14:52] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:14:52] NOTICE: ready to handle connections
+[13-Sep-2017 12:27:04] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:27:04] NOTICE: ready to handle connections
+[13-Sep-2017 12:34:53] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:34:53] NOTICE: ready to handle connections
+[13-Sep-2017 12:43:44] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:43:44] NOTICE: ready to handle connections
+[13-Sep-2017 12:50:43] NOTICE: fpm is running, pid 1
+[13-Sep-2017 12:50:43] NOTICE: ready to handle connections
+[14-Sep-2017 02:10:52] NOTICE: fpm is running, pid 1
+[14-Sep-2017 02:10:52] NOTICE: ready to handle connections
+[14-Sep-2017 02:15:23] NOTICE: fpm is running, pid 1
+[14-Sep-2017 02:15:23] NOTICE: ready to handle connections
+[14-Sep-2017 02:23:17] NOTICE: fpm is running, pid 1
+[14-Sep-2017 02:23:17] NOTICE: ready to handle connections
+[14-Sep-2017 02:38:05] NOTICE: fpm is running, pid 1
+[14-Sep-2017 02:38:05] NOTICE: ready to handle connections
+[14-Sep-2017 02:40:33] NOTICE: fpm is running, pid 1
+[14-Sep-2017 02:40:33] NOTICE: ready to handle connections
+[14-Sep-2017 03:33:42] NOTICE: fpm is running, pid 1
+[14-Sep-2017 03:33:42] NOTICE: ready to handle connections
+[14-Sep-2017 06:45:47] NOTICE: fpm is running, pid 1
+[14-Sep-2017 06:45:47] NOTICE: ready to handle connections
+[14-Sep-2017 10:00:56] NOTICE: fpm is running, pid 1
+[14-Sep-2017 10:00:56] NOTICE: ready to handle connections
+[15-Sep-2017 03:27:11] NOTICE: Terminating ...
+[15-Sep-2017 03:27:11] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:48:54] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:48:54] NOTICE: ready to handle connections
+[15-Sep-2017 04:49:19] NOTICE: Terminating ...
+[15-Sep-2017 04:49:19] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:52:53] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:52:53] NOTICE: ready to handle connections
+[15-Sep-2017 04:54:34] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:54:34] NOTICE: ready to handle connections
+[15-Sep-2017 04:55:07] NOTICE: Terminating ...
+[15-Sep-2017 04:55:07] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:55:37] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:55:37] NOTICE: ready to handle connections
+[15-Sep-2017 04:56:46] NOTICE: Terminating ...
+[15-Sep-2017 04:56:46] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:57:10] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:57:10] NOTICE: ready to handle connections
+[15-Sep-2017 04:57:53] NOTICE: Terminating ...
+[15-Sep-2017 04:57:53] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:58:32] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:58:32] NOTICE: ready to handle connections
+[15-Sep-2017 04:59:13] NOTICE: Terminating ...
+[15-Sep-2017 04:59:13] NOTICE: exiting, bye-bye!
+[15-Sep-2017 04:59:26] NOTICE: fpm is running, pid 1
+[15-Sep-2017 04:59:26] NOTICE: ready to handle connections
+[15-Sep-2017 05:00:28] NOTICE: Terminating ...
+[15-Sep-2017 05:00:28] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:29:49] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:29:49] NOTICE: ready to handle connections
+[15-Sep-2017 06:33:48] NOTICE: Terminating ...
+[15-Sep-2017 06:33:48] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:34:43] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:34:43] NOTICE: ready to handle connections
+[15-Sep-2017 06:45:14] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:45:14] NOTICE: ready to handle connections
+[15-Sep-2017 06:46:07] NOTICE: Terminating ...
+[15-Sep-2017 06:46:07] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:46:26] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:46:26] NOTICE: ready to handle connections
+[15-Sep-2017 06:46:36] NOTICE: Terminating ...
+[15-Sep-2017 06:46:36] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:47:30] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:47:30] NOTICE: ready to handle connections
+[15-Sep-2017 06:47:40] NOTICE: Terminating ...
+[15-Sep-2017 06:47:40] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:52:44] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:52:44] NOTICE: ready to handle connections
+[15-Sep-2017 06:53:52] NOTICE: Terminating ...
+[15-Sep-2017 06:53:52] NOTICE: exiting, bye-bye!
+[15-Sep-2017 06:54:00] NOTICE: fpm is running, pid 1
+[15-Sep-2017 06:54:00] NOTICE: ready to handle connections
+[15-Sep-2017 06:59:08] NOTICE: Terminating ...
+[15-Sep-2017 06:59:08] NOTICE: exiting, bye-bye!
+[15-Sep-2017 08:49:34] NOTICE: fpm is running, pid 1
+[15-Sep-2017 08:49:34] NOTICE: ready to handle connections
+[18-Sep-2017 03:40:00] NOTICE: fpm is running, pid 1
+[18-Sep-2017 03:40:00] NOTICE: ready to handle connections
+[18-Sep-2017 03:48:22] NOTICE: fpm is running, pid 1
+[18-Sep-2017 03:48:22] NOTICE: ready to handle connections
+[18-Sep-2017 06:26:15] NOTICE: Terminating ...
+[18-Sep-2017 06:26:15] NOTICE: exiting, bye-bye!
+[19-Sep-2017 03:21:53] NOTICE: fpm is running, pid 1
+[19-Sep-2017 03:21:53] NOTICE: ready to handle connections
+[19-Sep-2017 03:32:24] NOTICE: Terminating ...
+[19-Sep-2017 03:32:24] NOTICE: exiting, bye-bye!
+[19-Sep-2017 03:32:43] NOTICE: fpm is running, pid 1
+[19-Sep-2017 03:32:43] NOTICE: ready to handle connections
+[19-Sep-2017 03:35:54] NOTICE: fpm is running, pid 1
+[19-Sep-2017 03:35:54] NOTICE: ready to handle connections
+[20-Sep-2017 07:54:41] NOTICE: fpm is running, pid 1
+[20-Sep-2017 07:54:41] NOTICE: ready to handle connections
+[20-Sep-2017 08:47:00] NOTICE: fpm is running, pid 1
+[20-Sep-2017 08:47:00] NOTICE: ready to handle connections
+[21-Sep-2017 06:38:42] NOTICE: fpm is running, pid 1
+[21-Sep-2017 06:38:42] NOTICE: ready to handle connections
+[21-Sep-2017 07:21:08] NOTICE: fpm is running, pid 1
+[21-Sep-2017 07:21:08] NOTICE: ready to handle connections
+[22-Sep-2017 02:43:30] NOTICE: fpm is running, pid 1
+[22-Sep-2017 02:43:30] NOTICE: ready to handle connections
+[25-Sep-2017 03:09:21] NOTICE: fpm is running, pid 1
+[25-Sep-2017 03:09:21] NOTICE: ready to handle connections
+[26-Sep-2017 02:42:52] NOTICE: fpm is running, pid 1
+[26-Sep-2017 02:42:52] NOTICE: ready to handle connections
+[27-Sep-2017 01:59:03] NOTICE: fpm is running, pid 1
+[27-Sep-2017 01:59:03] NOTICE: ready to handle connections
+[28-Sep-2017 11:34:11] NOTICE: fpm is running, pid 1
+[28-Sep-2017 11:34:11] NOTICE: ready to handle connections
+[28-Sep-2017 11:38:13] NOTICE: fpm is running, pid 1
+[28-Sep-2017 11:38:13] NOTICE: ready to handle connections
+[28-Sep-2017 11:46:09] NOTICE: Terminating ...
+[28-Sep-2017 11:46:09] NOTICE: exiting, bye-bye!
+[28-Sep-2017 11:47:47] NOTICE: fpm is running, pid 1
+[28-Sep-2017 11:47:47] NOTICE: ready to handle connections
+[28-Sep-2017 11:49:58] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[09-Oct-2017 10:24:11] NOTICE: fpm is running, pid 1
+[09-Oct-2017 10:24:11] NOTICE: ready to handle connections
+[09-Oct-2017 10:25:31] NOTICE: fpm is running, pid 1
+[09-Oct-2017 10:25:31] NOTICE: ready to handle connections
+[09-Oct-2017 10:27:08] NOTICE: fpm is running, pid 1
+[09-Oct-2017 10:27:08] NOTICE: ready to handle connections
+[10-Oct-2017 07:25:48] NOTICE: fpm is running, pid 1
+[10-Oct-2017 07:25:48] NOTICE: ready to handle connections
