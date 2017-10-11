@@ -1,2 +1,0 @@
-2017/10/11 02:11:44 [error] 5#5: *4 upstream timed out (110: Connection timed out) while connecting to upstream, client: 116.24.64.46, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://192.168.99.1:9000", host: "120.78.62.77"
-2017/10/11 02:55:23 [warn] 5#5: *2 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 116.24.64.46, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "120.78.62.77"
