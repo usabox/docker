@@ -12,7 +12,7 @@ RUN \
         zip \
         unzip \
         tar \
-	git \
+        git \
     && apt-get autoremove \
     && apt-get clean \
     && docker-php-ext-install -j$(nproc) iconv mcrypt pdo pdo_mysql\
@@ -34,7 +34,8 @@ RUN pecl install redis-3.1.3 \
     && pecl install xdebug-2.5.5 \
     && docker-php-ext-enable redis xdebug swoole
 
-RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');"
+RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');" \
+    && composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
 RUN php -r "copy('https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz','node-v6.11.4-linux-x64.tar.xz');"\
     && tar xfJ node-v6.11.4-linux-x64.tar.xz \
