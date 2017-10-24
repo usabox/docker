@@ -5,7 +5,7 @@ COMMAND_PWD=${COMMAND_ARGS[0]}
 #
 COMMAND_BODY=${COMMAND_ARGS[@]:1}
 #
-if [ -d "$COMAND_PWD" ];then
+if [ -d "$COMMAND_PWD" ];then
  cd $COMMAND_PWD
 fi
 

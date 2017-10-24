@@ -9,6 +9,9 @@ RUN \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng12-dev \
+        zip \
+        unzip \
+        tar \
 	git \
     && apt-get autoremove \
     && apt-get clean \
@@ -32,3 +35,15 @@ RUN pecl install redis-3.1.3 \
     && docker-php-ext-enable redis xdebug swoole
 
 RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');"
+
+RUN php -r "copy('https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz','node-v6.11.4-linux-x64.tar.xz');"\
+    && tar xfJ node-v6.11.4-linux-x64.tar.xz \
+    && mv node-v6.11.4-linux-x64 /usr/local/node \
+    && rm node-v6.11.4-linux-x64.tar.xz
+
+ENV PATH $PATH:/usr/local/node/bin
+
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+
+
