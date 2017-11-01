@@ -57,9 +57,23 @@ services:
                 - "6379:6379"
                 container_name: redis 
                 privileged: true
-                build: redis
+                build: ./redis
                 networks:
                 - app_net
+
+        logstash:
+                build: ./logstash
+                container_name: logstash
+                privileged: true
+                networks:
+                - app_net
+                volumes:
+                - ./logstash/logstash.conf:/logstash.conf
+                - ./logstash/logstash.yml:/etc/logstash/logstash.yml
+                - ./logstash/patterns:/patterns
+                ports:
+                - "5044:5044"
+
 networks:
         app_net:
                 external: true
