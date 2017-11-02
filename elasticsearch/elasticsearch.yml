@@ -15,7 +15,7 @@
 #
 # Use a descriptive name for your cluster:
 #
-#cluster.name: my-application
+cluster.name: ${cluster.name}
 #
 # ------------------------------------ Node ------------------------------------
 #
@@ -87,3 +87,11 @@ discovery.zen.ping.unicast.hosts: ["120.78.62.77:9300", "120.78.62.77:9301"]
 # Require explicit names when deleting indices:
 #
 #action.destructive_requires_name: true
+
+node.master: ${node.master}
+
+node.name: ${node.name}
+
+path.logs: ${path.logs}
+
+
