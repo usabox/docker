@@ -75,7 +75,6 @@ services:
                 - ./elasticsearch/esdata1:/usr/share/elasticsearch/data
                 - ./elasticsearch/jvm.options:/etc/elasticsearch/jvm.options
                 - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-                - ./elasticsearch/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties
                 - ./elasticsearch/logs:/usr/share/elasticsearch/logs
                 ports:
                 - "9200:9200"

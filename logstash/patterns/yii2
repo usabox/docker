@@ -1,1 +1,11 @@
-YII2_DATE \d{4}(?:\-\d{1,2}){2}\s\d{1,2}(?::\d{1,2}){2}
+YII_DATETIME \d{4}(?:\-\d{1,2}){2}\s\d{1,2}(?::\d{1,2}){2}
+YII_IP \[%{IP}\]
+YII_USER_ID (?:[^\]]*)
+YII_SESSION_ID (?:[^\]]*)
+YII_SEVERITY_LEVEL (?:[^\]]*)
+YII_CATEGORY (?:[^\]]*)
+YII_LOG_CONTENT (?:.*)
+YII_LOG %{YII_DATETIME:datetime}\s%{YII_IP:ip}\[%{YII_USER_ID:user_id}\]\[%{YII_SESSION_ID:session_id}\]\[%{YII_SEVERITY_LEVEL:severity_level}\]\[%{YII_CATEGORY:category}\]\s%{YII_LOG_CONTENT:content}
+
+
+
