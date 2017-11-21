@@ -28,6 +28,8 @@ services:
                 - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
                 - ./php-fpm/logs/:/phplogs/
                 - ./apps:/www
+                - /project:/www/project
+                - /github:/www/github
                 links:
                 - apps
                 ports:

@@ -2,7 +2,7 @@ FROM php:7.1-fpm
 
 MAINTAINER xieyutian "xieyutianhn@gmail.com"
 RUN \
-    apt-get update \
+    apt-get update --fix-missing \
     && apt-get install -y --no-install-recommends \
         libmcrypt-dev \
         libssl-dev \
@@ -28,14 +28,20 @@ RUN cd swoole \
     && phpize \
     && ./configure \
     && make \
-    && make install
+    && make install \
+    && cd .. \
+    && docker-php-ext-enable swoole
 
-RUN pecl install redis-3.1.3 \
-    && pecl install xdebug-2.5.5 \
-    && docker-php-ext-enable redis xdebug swoole
+RUN git clone https://github.com/phpredis/phpredis \
+    && cd phpredis/ \ 
+    && phpize \
+    && ./configure \
+    && make && make install \
+    && cd .. \
+    && docker-php-ext-enable redis 
 
 RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');" \
-    && composer config -g repo.packagist composer https://packagist.phpcomposer.com
+    && php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com
 
 RUN php -r "copy('https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz','node-v6.11.4-linux-x64.tar.xz');"\
     && tar xfJ node-v6.11.4-linux-x64.tar.xz \
