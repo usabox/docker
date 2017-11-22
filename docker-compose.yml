@@ -6,8 +6,12 @@ services:
                 build: ./mariadb
                 ports:
                 - "3306:3306"
+                volumes:
+                - ${MYSQL_DATA_DIR}:/data/mysql
+                - ./mariadb/conf/my.cnf:/etc/mysql/my.cnf
                 environment:
-                - mysql_root_password=123456
+                #- mysql_root_password=123456
+                - MYSQL_ROOT_PASSWORD=123456
                 networks:
                 - app_net
         php-fpm:
