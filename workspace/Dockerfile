@@ -1,9 +1,8 @@
 from centos
 
-WORKDIR /var/www
+RUN yum update -y
 
-RUN cd /var/www
+RUN yum install -y openssh-server supervisor vim net-tools
 
-RUN touch run.log
 
-CMD tail -f  run.log
+CMD ["/usr/bin/supervisord"]

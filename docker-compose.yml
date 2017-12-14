@@ -1,155 +1,122 @@
 version: '3'
 services:
-        workspace:
-                container_name: workspace
-                privileged: true
-                build: ./workspace
-                networks:
-                - app_net
-                volumes:
-                - ${WORK_DIR}:/data
-        mariadb:
-                container_name: mariadb
-                privileged: true
-                build: ./mariadb
-                ports:
-                - "3306:3306"
-                volumes:
-                - ${MYSQL_DATA_DIR}:/data/mysql
-                - ./mariadb/conf/my.cnf:/etc/mysql/my.cnf
-                - ${WORK_DIR}:/data
-                environment:
-                - MYSQL_ROOT_PASSWORD=123456
-                networks:
-                - app_net
-        php-fpm:
-                build: ./php-fpm
-                container_name: php-fpm
-                privileged: true
-                volumes:
-                    - ./php-fpm/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf
-                    - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
-                    - ./php-fpm/etc/php.ini/:/usr/local/etc/php/php.ini
-                    - ./php-fpm/logs/:/phplogs/
-                depends_on:
-                    - workspace
-                volumes:
-                    - ${WORK_DIR}:/data
-                ports:
-                    - "9100:9000"
-                networks:
-                    - app_net
-        nginx:
-                build: ./nginx
-                privileged: true
-                container_name: nginx
-                volumes:
-                - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-                - ./nginx/conf.d:/etc/nginx/conf.d
-                - ./nginx/logs:/wwwlogs/
-                - ${WORK_DIR}:/data
-                ports:
-                - "80:80"
-                depends_on:
-                - php-fpm
-                links:
-                - php-fpm
-                networks:
-                - app_net
-        redis:
-                ports:
-                - "6379:6379"
-                container_name: redis 
-                privileged: true
-                build: ./redis
-                networks:
-                ports:
-                - "80:80"
-                depends_on:
-                - php-fpm
-                links:
-                - php-fpm
-                networks:
-                - app_net
-        elasticsearch:
-                build: ./elasticsearch
-                container_name: elasticsearch
-                environment:
-                - cluster.name=docker-cluster
-                - bootstrap.memory_lock=true
-                - node.master=true
-                - node.name=master
-                - path.logs=/usr/share/elasticsearch/logs
-                - xpack.ml.enabled=true
-                networks:
-                - app_net
-                volumes:
-                - ./elasticsearch/esdata1:/usr/share/elasticsearch/data
-                - ./elasticsearch/jvm.options:/etc/elasticsearch/jvm.options
-                - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-                - ./elasticsearch/logs:/usr/share/elasticsearch/logs
-                ports:
-                - "9200:9200"
-                - "9300:9300"
-                ulimits:
-                    memlock:
-                        soft: -1
-                        hard: -1
-        elasticsearch1:
-                build: ./elasticsearch
-                container_name: elasticsearch1
-                environment:
-                - cluster.name=docker-cluster
-                - bootstrap.memory_lock=true
-                - node.master=false
-                - node.name=node1
-                - path.logs=/usr/share/elasticsearch/logs
-                networks:
-                - app_net
-                volumes:
-                - ./elasticsearch/esdata2:/usr/share/elasticsearch/data
-                - ./elasticsearch/jvm.options:/etc/elasticsearch/jvm.options
-                  # - ./elasticsearch/jvm.options:/user/share/elasticsearch/config/jvm.options
-                - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-                  #- ./elasticsearch/elasticsearch.yml:/etc/elasticseach/elasticsearch.yml
-                - ./elasticsearch/logs1:/usr/share/elasticsearch/logs
-                ports:
-                - "9201:9200"
-                - "9301:9300"
-                ulimits:
-                    memlock:
-                        soft: -1
-                        hard: -1
-        logstash:
-                build: ./logstash
-                container_name: logstash
-                privileged: true
-                networks:
-                - app_net
-                links:
-                - elasticsearch
-                volumes:
-                - ./logstash/logstash.conf:/logstash.conf
-                - ./logstash/logstash.yml:/etc/logstash/logstash.yml
-                - ./logstash/patterns:/patterns
-                ports:
-                - "5044:5044"
-                links:
-                - elasticsearch
-        kibana:
-                build: ./kibana
-                container_name: kibana
-                privileged: true
-                networks:
-                - app_net
-                links:
-                - elasticsearch
-                ports:
-                - "5601:5601"
+    workspace:
+        container_name: workspace
+        privileged: true
+        build: ./workspace
+        networks:
+            - app_net
+        volumes:
+            - ${WORK_DIR}:/data
+    mariadb:
+        container_name: mariadb
+        privileged: true
+        build: ./mariadb
+        ports:
+            - "3306:3306"
+        volumes:
+            - ${MYSQL_DATA_DIR}:/data/mysql
+            - ./mariadb/conf/my.cnf:/etc/mysql/my.cnf
+            - ${WORK_DIR}:/data
+        environment:
+            - MYSQL_ROOT_PASSWORD=123456
+        networks:
+            - app_net
+    php-fpm:
+        build: ./php-fpm
+        container_name: php-fpm
+        privileged: true
+        volumes:
+            - ./php-fpm/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf
+            - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
+            - ./php-fpm/etc/php.ini/:/usr/local/etc/php/php.ini
+            - ./php-fpm/logs/:/phplogs/
+        depends_on:
+            - workspace
+        volumes:
+            - ${WORK_DIR}:/data
+        ports:
+            - "9100:9000"
+        networks:
+            - app_net
+    nginx:
+        build: ./nginx
+        privileged: true
+        container_name: nginx
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx/conf.d:/etc/nginx/conf.d
+            - ./nginx/logs:/wwwlogs/
+            - ${WORK_DIR}:/data
+        ports:
+            - "80:80"
+        depends_on:
+        links:
+            - php-fpm
+        networks:
+            - app_net
+    redis:
+        ports:
+            - "6379:6379"
+        container_name: redis 
+        privileged: true
+        build: ./redis
+        networks:
+            - app_net
+    elasticsearch:
+        build: ./elasticsearch
+        container_name: elasticsearch
+        environment:
+            - cluster.name=docker-cluster
+            - bootstrap.memory_lock=true
+            - node.master=true
+            - node.name=master
+            - path.logs=/usr/share/elasticsearch/logs
+            - xpack.ml.enabled=true
+        networks:
+            - app_net
+        volumes:
+            - ./elasticsearch/esdata1:/usr/share/elasticsearch/data
+            - ./elasticsearch/jvm.options:/etc/elasticsearch/jvm.options
+            - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+            - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+    logstash:
+        build: ./logstash
+        container_name: logstash
+        privileged: true
+        networks:
+            - app_net
+        links:
+            - elasticsearch
+        volumes:
+            - ./logstash/logstash.conf:/logstash.conf
+            - ./logstash/logstash.yml:/etc/logstash/logstash.yml
+            - ./logstash/patterns:/patterns
+        ports:
+            - "5044:5044"
+        links:
+            - elasticsearch
+    kibana:
+        build: ./kibana
+        container_name: kibana
+        privileged: true
+        networks:
+            - app_net
+        links:
+            - elasticsearch
+        ports:
+            - "5601:5601"
 
 networks:
-        app_net:
-                external: true
+    app_net:
+        external: true
 
 volumes:
-        mysql-data:
+    mysql-data:
