@@ -23,6 +23,6 @@ RUN rm -f /tmp/id_rsa* \
 
 RUN mkdir /var/run/sshd
 
-EXPOSE 22 80
+EXPOSE 22 80 81 82
 
 CMD ["/usr/bin/supervisord"]
