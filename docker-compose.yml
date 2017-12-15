@@ -8,6 +8,11 @@ services:
             - app_net
         volumes:
             - ${WORK_DIR}:/data
+            - ./workspace/etc/supervisord.conf:/etc/supervisord.conf
+              #- ./workspace/etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
+              #- ./workspace/etc/ssh/ssh_host_rsa_key.pub:/etc/ssh/ssh_host_rsa_key.pub
+        ports:
+            - "52222:22"
     mariadb:
         container_name: mariadb
         privileged: true
@@ -51,6 +56,7 @@ services:
         ports:
             - "80:80"
         depends_on:
+            - workspace
         links:
             - php-fpm
         networks:
