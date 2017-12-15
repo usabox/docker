@@ -9,10 +9,8 @@ services:
         volumes:
             - ${WORK_DIR}:/data
             - ./workspace/etc/supervisord.conf:/etc/supervisord.conf
-              #- ./workspace/etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
-              #- ./workspace/etc/ssh/ssh_host_rsa_key.pub:/etc/ssh/ssh_host_rsa_key.pub
         ports:
-            - "52222:22"
+            - "2222:22"
     mariadb:
         container_name: mariadb
         privileged: true
@@ -36,10 +34,10 @@ services:
             - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
             - ./php-fpm/etc/php.ini/:/usr/local/etc/php/php.ini
             - ./php-fpm/logs/:/phplogs/
+            - ./php-fpm/etc/supervisor:/etc/supervisor
+            - ${WORK_DIR}:/data
         depends_on:
             - workspace
-        volumes:
-            - ${WORK_DIR}:/data
         ports:
             - "9100:9000"
         networks:
@@ -52,9 +50,12 @@ services:
             - ./nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./nginx/conf.d:/etc/nginx/conf.d
             - ./nginx/logs:/wwwlogs/
+            - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
             - "80:80"
+            - "81:81"
+            - "82:82"
         depends_on:
             - workspace
         links:

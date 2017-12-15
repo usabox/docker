@@ -4,7 +4,7 @@
         }
 
         location  ~ \.php$|.+\.php/.+$ {
-                fastcgi_pass   php-fpm:9000;
+                fastcgi_pass   php-fpm:9100;
                 fastcgi_index  index.php;
                 fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
                 include        fastcgi_params;
