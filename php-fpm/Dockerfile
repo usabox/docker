@@ -41,7 +41,8 @@ RUN git clone https://github.com/phpredis/phpredis \
     && docker-php-ext-enable redis 
 
 RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');" \
-    && php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com
+    && php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com \
+    && mv composer.phar /usr/bin/composer
 
 RUN php -r "copy('https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz','node-v6.11.4-linux-x64.tar.xz');"\
     && tar xfJ node-v6.11.4-linux-x64.tar.xz \
@@ -73,7 +74,30 @@ RUN rm -f /tmp/id_rsa* \
         && chmod 400 /root/.ssh/id_rsa 
 
 
-RUN mkdir /var/run/sshd && systemctl enable ssh && service ssh start
+RUN mkdir /var/run/sshd 
+
+#RUN mkdir /var/log/php-fpm && touch /var/log/php-fpm/error.log && chown www-data:www-data /var/log/php-fpm/error.log
+
+#RUN echo 'Asia/Shanghai' >/etc/timezone
+
+# zookeeper
+RUN php -r "copy('https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz','zookeeper-3.4.10.tar.gz');"
+
+RUN tar xfz zookeeper-3.4.10.tar.gz \
+        &&  cd zookeeper-3.4.10/src/c \
+        && ./configure -prefix=/usr/local/zookeeper-lib/ \
+        && make && make install \
+        && cd ../../../
+
+ADD  ./zookeeper/zookeeper-0.4.0.tgz .
+
+RUN cd zookeeper-0.4.0 \
+        && phpize && ./configure -with-libzookeeper-dir=/usr/local/zookeeper-lib/ && make && make install \
+        && docker-php-ext-enable zookeeper \
+        && cd ..
+
+RUN  pecl install mongodb \
+        && docker-php-ext-enable mongodb
 
 EXPOSE 22 9000
 

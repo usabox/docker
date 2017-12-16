@@ -1,9 +1,11 @@
 FROM nginx
 
-RUN apt-get update --fix-missing 
+ADD ./etc/apt/sources.list /etc/apt/sources.list
+
+RUN apt-get update
 
 # 安装 supervisor
-RUN apt-get install -y supervisor openssh-server
+RUN apt-get install -y supervisor openssh-server --allow-unauthenticated
 
 RUN usermod -s /bin/bash root
 

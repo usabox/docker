@@ -1,0 +1,70 @@
+[16-Dec-2017 17:05:04 PRC] An Error occurred while handling another error:
+yii\base\InvalidParamException: The HTTP status code is invalid: ????????? in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:285
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(306): yii\web\Response->setStatusCode('?????????')
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/ErrorHandler.php(92): yii\web\Response->setStatusCodeByException(Object(yii\web\HttpException))
+#2 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HttpException))
+#4 {main}
+Previous exception:
+yii\web\HttpException in /data/gitee/automation-platform/backend/modules/auto/controllers/GameController.php:115
+Stack trace:
+#0 [internal function]: backend\modules\auto\controllers\GameController->actionCreate()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#4 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('auto/game/creat...', Array)
+#5 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /data/gitee/automation-platform/backend/web/index.php(17): yii\base\Application->run()
+#7 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_csrf-backend=ecf63ec3c7259730664724299fc5c09aa6691c3ef3786351d16b93a05b345fa5a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22NqFyjSDZ9Z_pironnc1ZPXcq2dGgvzRe%22%3B%7D; advanced-backend=5a5c3aafae83ce6f9baf05e979140da2; left-tree-op=hide; _identity-backend=1ec635a3f16e4b8c5b1d1d7bfa2ef20bc02a85bfc95aed5f3a39c60a27414a85a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22U6HW5ghQaofY1aDzdMGew3Rb_CMW8xKu%22%2C2592000%5D%22%3B%7D',
+    'HTTP_CONNECTION' => 'Keep-Alive',
+    'HTTP_HOST' => 'localhost',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN,zh-Hans;q=0.8,en-GB;q=0.5,en;q=0.3',
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.18.0.5',
+    'REMOTE_PORT' => '39584',
+    'REMOTE_ADDR' => '172.18.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.7',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/automation-platform/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/auto/game/create',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/auto/game/create&',
+    'SCRIPT_FILENAME' => '/data/gitee/automation-platform/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1513415104.69348,
+    'REQUEST_TIME' => 1513415104,
+    'argv' => [
+        'q=/auto/game/create&',
+    ],
+    'argc' => 1,
+]
+[16-Dec-2017 09:30:06 UTC] PHP Warning:  require(/data/gitee/automation-platform/backend/web/../../vendor/autoload.php): failed to open stream: No such file or directory in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 09:30:06 UTC] PHP Fatal error:  require(): Failed opening required '/data/gitee/automation-platform/backend/web/../../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 09:31:52 UTC] PHP Warning:  require(/data/gitee/automation-platform/backend/web/../../vendor/autoload.php): failed to open stream: No such file or directory in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 09:31:52 UTC] PHP Fatal error:  require(): Failed opening required '/data/gitee/automation-platform/backend/web/../../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 09:34:36 UTC] PHP Warning:  require(/data/gitee/automation-platform/backend/web/../../vendor/autoload.php): failed to open stream: No such file or directory in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 09:34:36 UTC] PHP Fatal error:  require(): Failed opening required '/data/gitee/automation-platform/backend/web/../../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /data/gitee/automation-platform/backend/web/index.php on line 5
+[16-Dec-2017 17:58:07 PRC] PHP Fatal error:  Class 'yii\mongodb\ActiveRecord' not found in /data/gitee/automation-platform/backend/models/EnvConfig.php on line 24
+[16-Dec-2017 13:32:26 UTC] PHP Fatal error:  Uncaught Error: Class 'xxyx\game\Game' not found in /data/gitee/automation-platform/common/config/params-local.php:53
+Stack trace:
+#0 /data/gitee/automation-platform/backend/config/main.php(4): require()
+#1 /data/gitee/automation-platform/backend/web/index.php(13): require('/data/gitee/aut...')
+#2 {main}
+  thrown in /data/gitee/automation-platform/common/config/params-local.php on line 53

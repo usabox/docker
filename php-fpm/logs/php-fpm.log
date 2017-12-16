@@ -10,3 +10,37 @@
 [15-Dec-2017 11:17:23] NOTICE: ready to handle connections
 [15-Dec-2017 11:30:42] NOTICE: fpm is running, pid 8
 [15-Dec-2017 11:30:42] NOTICE: ready to handle connections
+[15-Dec-2017 16:43:23] NOTICE: fpm is running, pid 9
+[15-Dec-2017 16:43:23] NOTICE: ready to handle connections
+[15-Dec-2017 16:43:27] NOTICE: Terminating ...
+[15-Dec-2017 16:43:27] NOTICE: exiting, bye-bye!
+[15-Dec-2017 16:52:16] NOTICE: fpm is running, pid 8
+[15-Dec-2017 16:52:16] NOTICE: ready to handle connections
+[15-Dec-2017 18:42:23] NOTICE: fpm is running, pid 8
+[15-Dec-2017 18:42:23] NOTICE: ready to handle connections
+[15-Dec-2017 18:42:52] NOTICE: fpm is running, pid 9
+[15-Dec-2017 18:42:52] NOTICE: ready to handle connections
+[15-Dec-2017 18:43:08] NOTICE: fpm is running, pid 8
+[15-Dec-2017 18:43:08] NOTICE: ready to handle connections
+[15-Dec-2017 18:52:20] NOTICE: fpm is running, pid 8
+[15-Dec-2017 18:52:20] NOTICE: ready to handle connections
+[16-Dec-2017 04:23:51] NOTICE: fpm is running, pid 14
+[16-Dec-2017 04:23:51] NOTICE: ready to handle connections
+[16-Dec-2017 04:34:58] ERROR: [pool www] please specify user and group other than root
+[16-Dec-2017 04:34:58] ERROR: FPM initialization failed
+[16-Dec-2017 04:34:59] ERROR: [pool www] please specify user and group other than root
+[16-Dec-2017 04:34:59] ERROR: FPM initialization failed
+[16-Dec-2017 04:35:01] ERROR: [pool www] please specify user and group other than root
+[16-Dec-2017 04:35:01] ERROR: FPM initialization failed
+[16-Dec-2017 04:35:04] ERROR: [pool www] please specify user and group other than root
+[16-Dec-2017 04:35:04] ERROR: FPM initialization failed
+[16-Dec-2017 04:37:52] NOTICE: fpm is running, pid 8
+[16-Dec-2017 04:37:52] NOTICE: ready to handle connections
+[16-Dec-2017 05:19:36] NOTICE: fpm is running, pid 8
+[16-Dec-2017 05:19:36] NOTICE: ready to handle connections
+[16-Dec-2017 05:20:20] WARNING: [pool www] child 10 said into stderr: "NOTICE: PHP message: helo"
+[16-Dec-2017 05:20:23] WARNING: [pool www] child 11 said into stderr: "NOTICE: PHP message: helo"
+[16-Dec-2017 05:24:22] NOTICE: fpm is running, pid 8
+[16-Dec-2017 05:24:22] NOTICE: ready to handle connections
+[16-Dec-2017 05:26:28] NOTICE: Terminating ...
+[16-Dec-2017 05:26:28] NOTICE: exiting, bye-bye!
