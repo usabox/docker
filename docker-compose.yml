@@ -20,7 +20,7 @@ services:
         volumes:
             - mysql-data:/data/mysql
             - ./mariadb/conf/my.cnf:/etc/mysql/my.cnf
-            - ./mariadb/etc/supervisor:/etc/supervisor
+              #- ./mariadb/etc/supervisor:/etc/supervisor
         environment:
             - MYSQL_ROOT_PASSWORD=123456
         networks:

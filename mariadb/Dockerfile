@@ -1,32 +1,32 @@
 FROM mariadb:10.3
 
-ADD ./etc/apt/sources.list /etc/apt/sources.list
+#ADD ./etc/apt/sources.list /etc/apt/sources.list
 
-RUN apt-get update
+#RUN apt-get update
 
 # 安装 supervisor
-RUN apt-get install -y supervisor openssh-server --allow-unauthenticated
+#RUN apt-get install -y supervisor openssh-server --allow-unauthenticated
 
 
-RUN usermod -s /bin/bash root
+#RUN usermod -s /bin/bash root
 
 
-ADD id_rsa /tmp/id_rsa
-ADD id_rsa.pub /tmp/id_rsa.pub
+#ADD id_rsa /tmp/id_rsa
+#ADD id_rsa.pub /tmp/id_rsa.pub
 
-RUN mkdir /root/.ssh
+#RUN mkdir /root/.ssh
 
-RUN cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys \
-        && cat /tmp/id_rsa.pub >> /root/.ssh/id_rsa.pub \
-        && cat /tmp/id_rsa >> /root/.ssh/id_rsa
+#RUN cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys \
+#        && cat /tmp/id_rsa.pub >> /root/.ssh/id_rsa.pub \
+#        && cat /tmp/id_rsa >> /root/.ssh/id_rsa
 
-RUN rm -f /tmp/id_rsa* \
-        && chmod 644 /root/.ssh/authorized_keys /root/.ssh/id_rsa.pub \
-        && chmod 400 /root/.ssh/id_rsa 
+#RUN rm -f /tmp/id_rsa* \
+#        && chmod 644 /root/.ssh/authorized_keys /root/.ssh/id_rsa.pub \
+#        && chmod 400 /root/.ssh/id_rsa 
 
 
-RUN mkdir /var/run/sshd && systemctl enable ssh && service ssh start
+#RUN mkdir /var/run/sshd && systemctl enable ssh && service ssh start
 
-EXPOSE 22 9000
+#EXPOSE 22 3306
 
-CMD ["/usr/bin/supervisord"]
+#CMD ["/usr/bin/supervisord"]

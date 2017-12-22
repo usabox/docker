@@ -57,6 +57,32 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 # 安装 supervisor
 RUN apt-get install -y supervisor openssh-server
 
+# zookeeper
+RUN php -r "copy('https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz','zookeeper-3.4.10.tar.gz');"
+
+RUN tar xfz zookeeper-3.4.10.tar.gz \
+        &&  cd zookeeper-3.4.10/src/c \
+        && ./configure -prefix=/usr/local/zookeeper-lib/ \
+        && make && make install \
+        && cd ../../../
+
+ADD  ./zookeeper/zookeeper-0.4.0.tgz .
+RUN cd zookeeper-0.4.0 \
+        && phpize && ./configure -with-libzookeeper-dir=/usr/local/zookeeper-lib/ && make && make install \
+        && docker-php-ext-enable zookeeper \
+        && cd ..
+
+
+ADD  ./mongodb/mongodb-1.3.4.tgz .
+RUN cd  mongodb-1.3.4 \
+        && phpize && ./configure && make && make install \
+        && docker-php-ext-enable mongodb\
+        && cd ..
+
+
+#RUN  pecl install mongodb \
+#        && docker-php-ext-enable mongodb
+
 RUN usermod -s /bin/bash root
 
 
@@ -76,28 +102,8 @@ RUN rm -f /tmp/id_rsa* \
 
 RUN mkdir /var/run/sshd 
 
-#RUN mkdir /var/log/php-fpm && touch /var/log/php-fpm/error.log && chown www-data:www-data /var/log/php-fpm/error.log
 
-#RUN echo 'Asia/Shanghai' >/etc/timezone
 
-# zookeeper
-RUN php -r "copy('https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz','zookeeper-3.4.10.tar.gz');"
-
-RUN tar xfz zookeeper-3.4.10.tar.gz \
-        &&  cd zookeeper-3.4.10/src/c \
-        && ./configure -prefix=/usr/local/zookeeper-lib/ \
-        && make && make install \
-        && cd ../../../
-
-ADD  ./zookeeper/zookeeper-0.4.0.tgz .
-
-RUN cd zookeeper-0.4.0 \
-        && phpize && ./configure -with-libzookeeper-dir=/usr/local/zookeeper-lib/ && make && make install \
-        && docker-php-ext-enable zookeeper \
-        && cd ..
-
-RUN  pecl install mongodb \
-        && docker-php-ext-enable mongodb
 
 EXPOSE 22 9000
 
