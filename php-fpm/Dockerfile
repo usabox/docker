@@ -79,6 +79,11 @@ RUN cd  mongodb-1.3.4 \
         && docker-php-ext-enable mongodb\
         && cd ..
 
+RUN git clone https://github.com/xdebug/xdebug \
+    && cd xdebug \
+    && ./rebuild.sh \
+    && docker-php-ext-enable xdebug\
+    && cd ..
 
 #RUN  pecl install mongodb \
 #        && docker-php-ext-enable mongodb
@@ -101,9 +106,6 @@ RUN rm -f /tmp/id_rsa* \
 
 
 RUN mkdir /var/run/sshd 
-
-
-
 
 EXPOSE 22 9000
 
