@@ -42,6 +42,7 @@ services:
         ports:
             - "9100:9000"
             - "9601:9601"
+            - "9501:9501"
         networks:
             - app_net
     nginx:
@@ -55,9 +56,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "80:80"
-            - "81:81"
-            - "82:82"
+            - "80-99:80-99"
         depends_on:
             - workspace
         links:

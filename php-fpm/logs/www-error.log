@@ -1563,3 +1563,1774 @@ Stack trace:
 [27-Dec-2017 07:35:27 UTC] PHP  51. call_user_func_array:{/data/github/blog/vendor/laravel/framework/src/Illuminate/Routing/Controller.php:54}() /data/github/blog/vendor/laravel/framework/src/Illuminate/Routing/Controller.php:54
 [27-Dec-2017 07:35:27 UTC] PHP  52. App\Http\Controllers\TaskController->index() /data/github/blog/vendor/laravel/framework/src/Illuminate/Routing/Controller.php:54
 [27-Dec-2017 07:35:27 UTC] PHP  53. Swoole\Client->__construct() /data/github/blog/app/Http/Controllers/TaskController.php:9
+[09-Jan-2018 14:26:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'xxyx\game\Game' not found in /data/gitee/automation-platform/common/config/params-local.php:53
+Stack trace:
+#0 /data/gitee/automation-platform/backend/config/main.php(4): require()
+#1 /data/gitee/automation-platform/backend/web/index.php(13): require('/data/gitee/aut...')
+#2 {main}
+  thrown in /data/gitee/automation-platform/common/config/params-local.php on line 53
+[12-Jan-2018 10:37:32 Asia/Chongqing] PHP Warning:  require(/data/gitee/wlmj_admin_set/backend/web/../../common/config/main-local.php): failed to open stream: No such file or directory in /data/gitee/wlmj_admin_set/backend/web/index.php on line 12
+[12-Jan-2018 10:37:32 Asia/Chongqing] PHP Stack trace:
+[12-Jan-2018 10:37:32 Asia/Chongqing] PHP   1. {main}() /data/gitee/wlmj_admin_set/backend/web/index.php:0
+[12-Jan-2018 10:37:33 Asia/Chongqing] PHP Fatal error:  require(): Failed opening required '/data/gitee/wlmj_admin_set/backend/web/../../common/config/main-local.php' (include_path='.:/usr/local/lib/php') in /data/gitee/wlmj_admin_set/backend/web/index.php on line 12
+[12-Jan-2018 10:37:33 Asia/Chongqing] PHP Stack trace:
+[12-Jan-2018 10:37:33 Asia/Chongqing] PHP   1. {main}() /data/gitee/wlmj_admin_set/backend/web/index.php:0
+[12-Jan-2018 15:40:27 PRC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/ErrorHandler.php(124): yii\web\Response->send()
+#2 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /data/gitee/automation-platform/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity-backend=a37a619a09e8d47e0790f6c5805173745aaf88aa7e04f64b3704c24326f02ed9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22U6HW5ghQaofY1aDzdMGew3Rb_CMW8xKu%22%2C2592000%5D%22%3B%7D; PHPSESSID=639c6b91a88f3496a6192acb36e9f5e2; _csrf=19b113800cb6e247d98f56cc62cacb9a24772ca97534cc3bd599d290b9f0950aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pXIhEZ3TPT2T8LrdKmKCBcCz-Ui4atwx%22%3B%7D; _identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; advanced-backend=df6fcb34df3afae509db9b3d32863074; _csrf-backend=9e1bfd0e3efed92f4f5f5c192f833fe5794c91617007ccd2e580c055c71d08e4a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MM6hbaq22azYrn5ujCw-gBHgzdEJ8WcS%22%3B%7D; sub_game_id=100001',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'http://localhost/auto/pay-center/update?game_id=1000&channel_id=0',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '916',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.18.0.5',
+    'REMOTE_PORT' => '34770',
+    'REMOTE_ADDR' => '172.18.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/automation-platform/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/auto/pay-center/update?game_id=1000&channel_id=0',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '916',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    'SCRIPT_FILENAME' => '/data/gitee/automation-platform/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1515742824.864231,
+    'REQUEST_TIME' => 1515742824,
+    'argv' => [
+        'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    ],
+    'argc' => 1,
+]
+[12-Jan-2018 15:41:02 PRC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/ErrorHandler.php(124): yii\web\Response->send()
+#2 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /data/gitee/automation-platform/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity-backend=a37a619a09e8d47e0790f6c5805173745aaf88aa7e04f64b3704c24326f02ed9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22U6HW5ghQaofY1aDzdMGew3Rb_CMW8xKu%22%2C2592000%5D%22%3B%7D; PHPSESSID=639c6b91a88f3496a6192acb36e9f5e2; _csrf=19b113800cb6e247d98f56cc62cacb9a24772ca97534cc3bd599d290b9f0950aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pXIhEZ3TPT2T8LrdKmKCBcCz-Ui4atwx%22%3B%7D; _identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; advanced-backend=df6fcb34df3afae509db9b3d32863074; _csrf-backend=9e1bfd0e3efed92f4f5f5c192f833fe5794c91617007ccd2e580c055c71d08e4a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MM6hbaq22azYrn5ujCw-gBHgzdEJ8WcS%22%3B%7D; sub_game_id=100001',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'http://localhost/auto/pay-center/update?game_id=1000&channel_id=0',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '916',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.18.0.5',
+    'REMOTE_PORT' => '34770',
+    'REMOTE_ADDR' => '172.18.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/automation-platform/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/auto/pay-center/update?game_id=1000&channel_id=0',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '916',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    'SCRIPT_FILENAME' => '/data/gitee/automation-platform/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1515742858.402344,
+    'REQUEST_TIME' => 1515742858,
+    'argv' => [
+        'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    ],
+    'argc' => 1,
+]
+[12-Jan-2018 15:42:04 PRC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/ErrorHandler.php(124): yii\web\Response->send()
+#2 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /data/gitee/automation-platform/backend/modules/auto/models/PayCenter.php on line 275. in /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /data/gitee/automation-platform/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /data/gitee/automation-platform/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /data/gitee/automation-platform/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity-backend=a37a619a09e8d47e0790f6c5805173745aaf88aa7e04f64b3704c24326f02ed9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22U6HW5ghQaofY1aDzdMGew3Rb_CMW8xKu%22%2C2592000%5D%22%3B%7D; PHPSESSID=639c6b91a88f3496a6192acb36e9f5e2; _csrf=19b113800cb6e247d98f56cc62cacb9a24772ca97534cc3bd599d290b9f0950aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pXIhEZ3TPT2T8LrdKmKCBcCz-Ui4atwx%22%3B%7D; _identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; advanced-backend=df6fcb34df3afae509db9b3d32863074; _csrf-backend=9e1bfd0e3efed92f4f5f5c192f833fe5794c91617007ccd2e580c055c71d08e4a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MM6hbaq22azYrn5ujCw-gBHgzdEJ8WcS%22%3B%7D; sub_game_id=100001',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'http://localhost/auto/pay-center/update?game_id=1000&channel_id=0',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '916',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.18.0.5',
+    'REMOTE_PORT' => '34770',
+    'REMOTE_ADDR' => '172.18.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/automation-platform/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/auto/pay-center/update?game_id=1000&channel_id=0',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '916',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    'SCRIPT_FILENAME' => '/data/gitee/automation-platform/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1515742918.215474,
+    'REQUEST_TIME' => 1515742918,
+    'argv' => [
+        'q=/auto/pay-center/update&game_id=1000&channel_id=0',
+    ],
+    'argc' => 1,
+]
+[22-Jan-2018 15:57:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'xxyx\game\Game' not found in /data/gitee/web-activity/common/config/main-local.php:38
+Stack trace:
+#0 /data/gitee/web-activity/frontend/web/index.php(12): require()
+#1 {main}
+  thrown in /data/gitee/web-activity/common/config/main-local.php on line 38
+[22-Jan-2018 15:57:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'xxyx\game\Game' not found in /data/gitee/web-activity/common/config/main-local.php:38
+Stack trace:
+#0 /data/gitee/web-activity/frontend/web/index.php(12): require()
+#1 {main}
+  thrown in /data/gitee/web-activity/common/config/main-local.php on line 38
+[30-Jan-2018 11:45:42 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44726',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517283942.090885,
+    'REQUEST_TIME' => 1517283942,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:45:58 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44726',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517283958.190571,
+    'REQUEST_TIME' => 1517283958,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:46:01 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44726',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517283961.788359,
+    'REQUEST_TIME' => 1517283961,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:46:07 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44726',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517283967.417477,
+    'REQUEST_TIME' => 1517283967,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:49:55 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284194.810629,
+    'REQUEST_TIME' => 1517284194,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:49:56 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284196.242515,
+    'REQUEST_TIME' => 1517284196,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:50:49 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284249.522915,
+    'REQUEST_TIME' => 1517284249,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:51:55 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284315.650593,
+    'REQUEST_TIME' => 1517284315,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:52:20 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:428
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:428
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284339.91964,
+    'REQUEST_TIME' => 1517284339,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:52:52 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '44988',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284372.095068,
+    'REQUEST_TIME' => 1517284372,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 11:56:55 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '45266',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517284615.617835,
+    'REQUEST_TIME' => 1517284615,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 14:29:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'backend\controllers\SiteControlle' not found in /data/gitee/xxyx_risk/backend/config/main.php:52
+Stack trace:
+#0 /data/gitee/xxyx_risk/backend/web/index.php(13): require()
+#1 {main}
+  thrown in /data/gitee/xxyx_risk/backend/config/main.php on line 52
+[30-Jan-2018 14:29:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Undefined class constant 'uniqueId' in /data/gitee/xxyx_risk/backend/config/main.php:52
+Stack trace:
+#0 /data/gitee/xxyx_risk/backend/web/index.php(13): require()
+#1 {main}
+  thrown in /data/gitee/xxyx_risk/backend/config/main.php on line 52
+[30-Jan-2018 14:31:34 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '51592',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517293894.373494,
+    'REQUEST_TIME' => 1517293894,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 14:31:36 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '51592',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517293896.254743,
+    'REQUEST_TIME' => 1517293896,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 14:31:37 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '51592',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517293897.575239,
+    'REQUEST_TIME' => 1517293897,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 14:35:26 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(131): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '51736',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517294126.244564,
+    'REQUEST_TIME' => 1517294126,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[30-Jan-2018 14:36:15 Asia/Chongqing] An Error occurred while handling another error:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\web\ErrorAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+yii\web\ForbiddenHttpException: Login Required in /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/User.php:427
+Stack trace:
+#0 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(156): yii\web\User->loginRequired()
+#1 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Component.php(557): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(682): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#8 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#9 /data/gitee/xxyx_risk/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /data/gitee/xxyx_risk/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'USER' => 'www-data',
+    'HOME' => '/var/www',
+    'HTTP_COOKIE' => '_identity=4311848fb8ae78a750c0333010b6f4a936ffd3f1ecc14c3badbc7de7b14e4fffa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22257qszj_l6nGKTaYtHP0SerQxYOr8S6A%22%2C2592000%5D%22%3B%7D; _csrf-backend=3b7220a2b6e79727ad304cd3f8318e82baff80bd02433fb751918ae2c7ebdb66a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22GbbXbu9Wx-qvIHR3beZ_6N-p6nLZnR6V%22%3B%7D; PHPSESSID=3f60f546d7f31c8d3055a3e22313275e; _csrf=46af480955b439713016a2f0f08bca5e2fad0add67a02b9d97cbdbeb9140c5c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EDi9ZK1O4M4z4gwQ-1ymhnS42ordgbII%22%3B%7D; advanced-backend=ed5891808e20b381172b5865b0ca8cf4',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost:84',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '',
+    'SERVER_PORT' => '84',
+    'SERVER_ADDR' => '172.19.0.5',
+    'REMOTE_PORT' => '51764',
+    'REMOTE_ADDR' => '172.19.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.13.8',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/data/gitee/xxyx_risk/backend/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/login',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'q=/site/login&',
+    'SCRIPT_FILENAME' => '/data/gitee/xxyx_risk/backend/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1517294175.438982,
+    'REQUEST_TIME' => 1517294175,
+    'argv' => [
+        'q=/site/login&',
+    ],
+    'argc' => 1,
+]
+[02-Feb-2018 10:00:24 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /data/gitee/xxyx_risk/common/config/main.php on line 23
+[02-Feb-2018 10:00:32 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /data/gitee/xxyx_risk/common/config/main.php on line 23
+[02-Feb-2018 10:00:40 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /data/gitee/xxyx_risk/common/config/main.php on line 23
+[02-Feb-2018 10:00:48 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /data/gitee/xxyx_risk/common/config/main.php on line 23
+[02-Feb-2018 10:00:56 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /data/gitee/xxyx_risk/common/config/main.php on line 23
+[06-Feb-2018 02:47:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Illuminate\Log\LogServiceProvider::configureError_logHandler() in /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php:60
+Stack trace:
+#0 /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php(36): Illuminate\Log\LogServiceProvider->configureHandler(Object(Illuminate\Log\Writer))
+#1 /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php(18): Illuminate\Log\LogServiceProvider->createLogger()
+#2 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(726): Illuminate\Log\LogServiceProvider->Illuminate\Log\{closure}(Object(App\Application), Array)
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build(Object(Closure))
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('log')
+#5 /data/github/koel/vendor/la in /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php on line 60
+[06-Feb-2018 02:47:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Illuminate\Log\LogServiceProvider::configureError_logHandler() in /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php:60
+Stack trace:
+#0 /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php(36): Illuminate\Log\LogServiceProvider->configureHandler(Object(Illuminate\Log\Writer))
+#1 /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php(18): Illuminate\Log\LogServiceProvider->createLogger()
+#2 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(726): Illuminate\Log\LogServiceProvider->Illuminate\Log\{closure}(Object(App\Application), Array)
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build(Object(Closure))
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('log')
+#5 /data/github/koel/vendor/la in /data/github/koel/vendor/laravel/framework/src/Illuminate/Log/LogServiceProvider.php on line 60
+[06-Feb-2018 03:45:47 UTC] PHP Fatal error:  Uncaught ErrorException: var_export does not handle circular references in /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'var_export does...', '/data/github/ko...', 17, Array)
+#1 /data/github/koel/app/Http/Middleware/BaseMiddleware.php(17): var_export(Object(App\JWTAuth))
+#2 [internal function]: App\Http\Middleware\BaseMiddleware->__construct(Object(Illuminate\Routing\ResponseFactory), Object(Illuminate\Events\Dispatcher), Object(App\JWTAuth))
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(762): ReflectionClass->newInstanceArgs(Array)
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Http\\Middle...')
+#5 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('App\\Http\\Middle...')
+#6 /data/github/koel/ in /data/github/koel/app/Http/Middleware/BaseMiddleware.php on line 17
+[06-Feb-2018 03:45:47 UTC] PHP Stack trace:
+[06-Feb-2018 03:45:47 UTC] PHP   1. {main}() /data/github/koel/index.php:0
+[06-Feb-2018 03:45:47 UTC] PHP   2. App\Http\Kernel->terminate() /data/github/koel/index.php:57
+[06-Feb-2018 03:45:47 UTC] PHP   3. App\Http\Kernel->terminateMiddleware() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:189
+[06-Feb-2018 03:45:47 UTC] PHP   4. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
+[06-Feb-2018 03:45:47 UTC] PHP   5. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:728
+[06-Feb-2018 03:45:47 UTC] PHP   6. App\Application->resolve() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:575
+[06-Feb-2018 03:45:47 UTC] PHP   7. App\Application->build() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:608
+[06-Feb-2018 03:45:47 UTC] PHP   8. ReflectionClass->newInstanceArgs() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:45:47 UTC] PHP   9. App\Http\Middleware\GetUserFromToken->__construct() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:45:47 UTC] PHP  10. var_export() /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+[06-Feb-2018 03:47:28 UTC] PHP Fatal error:  Uncaught ErrorException: var_export does not handle circular references in /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'var_export does...', '/data/github/ko...', 17, Array)
+#1 /data/github/koel/app/Http/Middleware/BaseMiddleware.php(17): var_export(Object(App\JWTAuth))
+#2 [internal function]: App\Http\Middleware\BaseMiddleware->__construct(Object(Illuminate\Routing\ResponseFactory), Object(Illuminate\Events\Dispatcher), Object(App\JWTAuth))
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(762): ReflectionClass->newInstanceArgs(Array)
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Http\\Middle...')
+#5 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('App\\Http\\Middle...')
+#6 /data/github/koel/ in /data/github/koel/app/Http/Middleware/BaseMiddleware.php on line 17
+[06-Feb-2018 03:47:29 UTC] PHP Stack trace:
+[06-Feb-2018 03:47:29 UTC] PHP   1. {main}() /data/github/koel/index.php:0
+[06-Feb-2018 03:47:29 UTC] PHP   2. App\Http\Kernel->terminate() /data/github/koel/index.php:57
+[06-Feb-2018 03:47:29 UTC] PHP   3. App\Http\Kernel->terminateMiddleware() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:189
+[06-Feb-2018 03:47:29 UTC] PHP   4. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
+[06-Feb-2018 03:47:29 UTC] PHP   5. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:728
+[06-Feb-2018 03:47:29 UTC] PHP   6. App\Application->resolve() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:575
+[06-Feb-2018 03:47:29 UTC] PHP   7. App\Application->build() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:608
+[06-Feb-2018 03:47:29 UTC] PHP   8. ReflectionClass->newInstanceArgs() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:47:29 UTC] PHP   9. App\Http\Middleware\GetUserFromToken->__construct() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:47:29 UTC] PHP  10. var_export() /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+[06-Feb-2018 03:49:12 UTC] PHP Fatal error:  Uncaught ErrorException: var_export does not handle circular references in /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'var_export does...', '/data/github/ko...', 17, Array)
+#1 /data/github/koel/app/Http/Middleware/BaseMiddleware.php(17): var_export(Object(App\JWTAuth))
+#2 [internal function]: App\Http\Middleware\BaseMiddleware->__construct(Object(Illuminate\Routing\ResponseFactory), Object(Illuminate\Events\Dispatcher), Object(App\JWTAuth))
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(762): ReflectionClass->newInstanceArgs(Array)
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Http\\Middle...')
+#5 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('App\\Http\\Middle...')
+#6 /data/github/koel/ in /data/github/koel/app/Http/Middleware/BaseMiddleware.php on line 17
+[06-Feb-2018 03:49:13 UTC] PHP Stack trace:
+[06-Feb-2018 03:49:13 UTC] PHP   1. {main}() /data/github/koel/index.php:0
+[06-Feb-2018 03:49:13 UTC] PHP   2. App\Http\Kernel->terminate() /data/github/koel/index.php:57
+[06-Feb-2018 03:49:13 UTC] PHP   3. App\Http\Kernel->terminateMiddleware() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:189
+[06-Feb-2018 03:49:13 UTC] PHP   4. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
+[06-Feb-2018 03:49:13 UTC] PHP   5. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:728
+[06-Feb-2018 03:49:13 UTC] PHP   6. App\Application->resolve() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:575
+[06-Feb-2018 03:49:13 UTC] PHP   7. App\Application->build() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:608
+[06-Feb-2018 03:49:13 UTC] PHP   8. ReflectionClass->newInstanceArgs() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:49:13 UTC] PHP   9. App\Http\Middleware\GetUserFromToken->__construct() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 03:49:13 UTC] PHP  10. var_export() /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+[06-Feb-2018 04:34:11 UTC] PHP Fatal error:  Uncaught ErrorException: var_export does not handle circular references in /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'var_export does...', '/data/github/ko...', 17, Array)
+#1 /data/github/koel/app/Http/Middleware/BaseMiddleware.php(17): var_export(Object(App\JWTAuth))
+#2 [internal function]: App\Http\Middleware\BaseMiddleware->__construct(Object(Illuminate\Routing\ResponseFactory), Object(Illuminate\Events\Dispatcher), Object(App\JWTAuth))
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(762): ReflectionClass->newInstanceArgs(Array)
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Http\\Middle...')
+#5 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('App\\Http\\Middle...')
+#6 /data/github/koel/ in /data/github/koel/app/Http/Middleware/BaseMiddleware.php on line 17
+[06-Feb-2018 04:34:11 UTC] PHP Stack trace:
+[06-Feb-2018 04:34:11 UTC] PHP   1. {main}() /data/github/koel/index.php:0
+[06-Feb-2018 04:34:11 UTC] PHP   2. App\Http\Kernel->terminate() /data/github/koel/index.php:57
+[06-Feb-2018 04:34:11 UTC] PHP   3. App\Http\Kernel->terminateMiddleware() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:189
+[06-Feb-2018 04:34:11 UTC] PHP   4. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
+[06-Feb-2018 04:34:11 UTC] PHP   5. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:728
+[06-Feb-2018 04:34:11 UTC] PHP   6. App\Application->resolve() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:575
+[06-Feb-2018 04:34:12 UTC] PHP   7. App\Application->build() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:608
+[06-Feb-2018 04:34:12 UTC] PHP   8. ReflectionClass->newInstanceArgs() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 04:34:12 UTC] PHP   9. App\Http\Middleware\GetUserFromToken->__construct() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 04:34:12 UTC] PHP  10. var_export() /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+[06-Feb-2018 04:35:16 UTC] PHP Fatal error:  Uncaught ErrorException: var_export does not handle circular references in /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'var_export does...', '/data/github/ko...', 17, Array)
+#1 /data/github/koel/app/Http/Middleware/BaseMiddleware.php(17): var_export(Object(App\JWTAuth))
+#2 [internal function]: App\Http\Middleware\BaseMiddleware->__construct(Object(Illuminate\Routing\ResponseFactory), Object(Illuminate\Events\Dispatcher), Object(App\JWTAuth))
+#3 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(762): ReflectionClass->newInstanceArgs(Array)
+#4 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Http\\Middle...')
+#5 /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('App\\Http\\Middle...')
+#6 /data/github/koel/ in /data/github/koel/app/Http/Middleware/BaseMiddleware.php on line 17
+[06-Feb-2018 04:35:16 UTC] PHP Stack trace:
+[06-Feb-2018 04:35:16 UTC] PHP   1. {main}() /data/github/koel/index.php:0
+[06-Feb-2018 04:35:16 UTC] PHP   2. App\Http\Kernel->terminate() /data/github/koel/index.php:57
+[06-Feb-2018 04:35:16 UTC] PHP   3. App\Http\Kernel->terminateMiddleware() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:189
+[06-Feb-2018 04:35:17 UTC] PHP   4. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
+[06-Feb-2018 04:35:17 UTC] PHP   5. App\Application->make() /data/github/koel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:728
+[06-Feb-2018 04:35:17 UTC] PHP   6. App\Application->resolve() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:575
+[06-Feb-2018 04:35:17 UTC] PHP   7. App\Application->build() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:608
+[06-Feb-2018 04:35:17 UTC] PHP   8. ReflectionClass->newInstanceArgs() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 04:35:17 UTC] PHP   9. App\Http\Middleware\GetUserFromToken->__construct() /data/github/koel/vendor/laravel/framework/src/Illuminate/Container/Container.php:762
+[06-Feb-2018 04:35:17 UTC] PHP  10. var_export() /data/github/koel/app/Http/Middleware/BaseMiddleware.php:17
+[26-Feb-2018 11:04:29 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 11:04:29 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:29 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/web/index.php on line 26
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Notice:  Undefined index:  in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:30 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:37 Asia/Shanghai] PHP Notice:  Undefined offset: 123 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:04:38 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:38 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:53 Asia/Shanghai] PHP Notice:  Undefined offset: 123 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:04:53 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:53 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:04:56 Asia/Shanghai] PHP Notice:  Undefined offset: 123 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:04:56 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:04:57 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:05:08 Asia/Shanghai] PHP Notice:  Undefined offset: 123123 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:05:08 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:05:08 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:05:16 Asia/Shanghai] PHP Notice:  Undefined offset: 206242 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:05:16 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:05:16 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Notice:  Undefined offset: 206242 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:18:08 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 11:18:13 Asia/Shanghai] PHP Notice:  Undefined offset: 206242 in /data/gitee/web_daili/web/index.php on line 29
+[26-Feb-2018 11:18:13 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 11:18:13 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 15:49:39 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 15:49:39 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 15:49:39 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 15:49:39 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 15:49:40 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 15:49:40 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 15:49:40 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 15:49:40 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 15:50:11 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 15:50:12 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 15:50:12 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:01:37 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:38 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:39 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:44 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:44 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:44 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:45 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:45 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:45 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:46 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:47 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:48 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:49 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:50 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:50 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:52 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:01:53 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:16 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:34 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:36 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:37 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:37 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:02:38 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[26-Feb-2018 18:04:50 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:04:50 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:04:50 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:04:51 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:04:51 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:04:51 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:04:51 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:04:51 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:04:52 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:12 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:12 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:12 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:12 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:46:13 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:46:13 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:13 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:13 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:13 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:14 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:17 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:17 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:17 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:17 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:46:18 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:46:18 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:18 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:18 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:22 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:22 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:22 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:22 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:46:23 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:46:23 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:23 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:23 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:40 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:40 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:40 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:40 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:46:41 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:46:41 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:41 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:41 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:46:59 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:46:59 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:46:59 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:46:59 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:47:00 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:47:00 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:47:00 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:47:00 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:49:07 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:49:07 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:49:07 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:49:07 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:49:10 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:49:10 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:49:10 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:49:10 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[26-Feb-2018 18:49:52 Asia/Shanghai] PHP Notice:  Undefined index: gid in /data/gitee/web_daili/config/web.php on line 34
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP   2. require() /data/gitee/web_daili/web/index.php:15
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /data/gitee/web_daili/config/web.php:34) in /data/gitee/web_daili/web/index.php on line 20
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP Stack trace:
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[26-Feb-2018 18:49:53 Asia/Shanghai] PHP   2. session_start() /data/gitee/web_daili/web/index.php:20
+[27-Feb-2018 09:56:51 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function getGidIndex() in /data/gitee/web_daili/web/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /data/gitee/web_daili/web/index.php on line 24
+[27-Feb-2018 14:15:06 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:16:35 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:16:37 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:39:25 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:39:50 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:40:01 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[27-Feb-2018 14:40:22 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[01-Mar-2018 10:55:47 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[01-Mar-2018 12:24:06 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[02-Mar-2018 11:38:26 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:742
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 742
+[02-Mar-2018 14:35:34 Asia/Shanghai] PHP Warning:  in_array() expects parameter 2 to be array, null given in /data/gitee/web_daili/function/function.php on line 747
+[02-Mar-2018 14:35:34 Asia/Shanghai] PHP Stack trace:
+[02-Mar-2018 14:35:34 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP   2. getGidIndex() /data/gitee/web_daili/web/index.php:24
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP   3. in_array() /data/gitee/web_daili/function/function.php:747
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP Warning:  in_array() expects parameter 2 to be array, null given in /data/gitee/web_daili/function/function.php on line 747
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP Stack trace:
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP   2. getGidIndex() /data/gitee/web_daili/web/index.php:24
+[02-Mar-2018 14:35:35 Asia/Shanghai] PHP   3. in_array() /data/gitee/web_daili/function/function.php:747
+[02-Mar-2018 14:36:10 Asia/Shanghai] PHP Warning:  in_array() expects parameter 2 to be array, null given in /data/gitee/web_daili/function/function.php on line 749
+[02-Mar-2018 14:36:10 Asia/Shanghai] PHP Stack trace:
+[02-Mar-2018 14:36:10 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[02-Mar-2018 14:36:10 Asia/Shanghai] PHP   2. getGidIndex() /data/gitee/web_daili/web/index.php:24
+[02-Mar-2018 14:36:10 Asia/Shanghai] PHP   3. in_array() /data/gitee/web_daili/function/function.php:749
+[02-Mar-2018 14:36:11 Asia/Shanghai] PHP Warning:  in_array() expects parameter 2 to be array, null given in /data/gitee/web_daili/function/function.php on line 749
+[02-Mar-2018 14:36:11 Asia/Shanghai] PHP Stack trace:
+[02-Mar-2018 14:36:11 Asia/Shanghai] PHP   1. {main}() /data/gitee/web_daili/web/index.php:0
+[02-Mar-2018 14:36:11 Asia/Shanghai] PHP   2. getGidIndex() /data/gitee/web_daili/web/index.php:24
+[02-Mar-2018 14:36:11 Asia/Shanghai] PHP   3. in_array() /data/gitee/web_daili/function/function.php:749
+[02-Mar-2018 15:47:47 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:747
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 747
+[02-Mar-2018 16:25:00 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:747
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 747
+[05-Mar-2018 14:58:18 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on null in /data/gitee/web_daili/function/function.php:747
+Stack trace:
+#0 /data/gitee/web_daili/web/index.php(27): getGidIndex()
+#1 {main}
+  thrown in /data/gitee/web_daili/function/function.php on line 747
