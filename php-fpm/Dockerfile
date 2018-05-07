@@ -44,14 +44,16 @@ RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.ph
     && php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com \
     && mv composer.phar /usr/bin/composer
 
-RUN php -r "copy('https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz','node-v6.11.4-linux-x64.tar.xz');"\
-    && tar xfJ node-v6.11.4-linux-x64.tar.xz \
-    && mv node-v6.11.4-linux-x64 /usr/local/node \
-    && rm node-v6.11.4-linux-x64.tar.xz
+#RUN php -r "copy('https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.xz','node.tar.xz');"\
+#    && mkdir node && tar -xvf node.tar.xz -C ./node --strip-components 1 \
+#    && mv node /usr/local/node \
+#    && rm node.tar.xz
 
 ENV PATH $PATH:/usr/local/node/bin
 
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+#RUN npm config set registry http://registry.npm.taobao.org \
+#    && npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 
 # 安装 supervisor
@@ -106,6 +108,11 @@ RUN rm -f /tmp/id_rsa* \
 
 
 RUN mkdir /var/run/sshd 
+
+#RUN ln -s /usr/local/node/bin/node  /usr/local/bin/node \
+#    && ln -s /usr/local/node/bin/npm  /usr/local/bin/npm \
+#    && ln -s /usr/local/node/bin/cnpm  /usr/local/bin/cnpm 
+
 
 EXPOSE 22 9000
 
