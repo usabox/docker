@@ -3,12 +3,13 @@ FROM php:7.1-fpm
 MAINTAINER xieyutian "xieyutianhn@gmail.com"
 RUN \
     apt-get update --fix-missing \
+    && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends \
         libmcrypt-dev \
         libssl-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
-        libpng12-dev \
+        #libpng12-dev \
         zip \
         unzip \
         tar \
@@ -20,17 +21,17 @@ RUN \
     && docker-php-ext-install -j$(nproc) gd
 
 
-COPY swoole/ swoole/
+#COPY swoole/ swoole/
 
 COPY command.sh command.sh
 
-RUN cd swoole \
-    && phpize \
-    && ./configure \
-    && make \
-    && make install \
-    && cd .. \
-    && docker-php-ext-enable swoole
+#RUN cd swoole \
+#    && phpize \
+#    && ./configure \
+#    && make \
+#    && make install \
+#    && cd .. \
+#    && docker-php-ext-enable swoole
 
 RUN git clone https://github.com/phpredis/phpredis \
     && cd phpredis/ \ 
@@ -49,10 +50,10 @@ RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.ph
 #    && mv node /usr/local/node \
 #    && rm node.tar.xz
 
-ENV PATH $PATH:/usr/local/node/bin
+# ENV PATH $PATH:/usr/local/node/bin
 
 
-#RUN npm config set registry http://registry.npm.taobao.org \
+# RUN npm config set registry http://registry.npm.taobao.org \
 #    && npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 
@@ -62,17 +63,17 @@ RUN apt-get install -y supervisor openssh-server
 # zookeeper
 RUN php -r "copy('https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz','zookeeper-3.4.10.tar.gz');"
 
-RUN tar xfz zookeeper-3.4.10.tar.gz \
-        &&  cd zookeeper-3.4.10/src/c \
-        && ./configure -prefix=/usr/local/zookeeper-lib/ \
-        && make && make install \
-        && cd ../../../
+#RUN tar xfz zookeeper-3.4.10.tar.gz \
+#        &&  cd zookeeper-3.4.10/src/c \
+#        && ./configure -prefix=/usr/local/zookeeper-lib/ \
+#        && make && make install \
+#        && cd ../../../
 
-ADD  ./zookeeper/zookeeper-0.4.0.tgz .
-RUN cd zookeeper-0.4.0 \
-        && phpize && ./configure -with-libzookeeper-dir=/usr/local/zookeeper-lib/ && make && make install \
-        && docker-php-ext-enable zookeeper \
-        && cd ..
+#ADD  ./zookeeper/zookeeper-0.4.0.tgz .
+#RUN cd zookeeper-0.4.0 \
+#        && phpize && ./configure -with-libzookeeper-dir=/usr/local/zookeeper-lib/ && make && make install \
+#        && docker-php-ext-enable zookeeper \
+#        && cd ..
 
 
 ADD  ./mongodb/mongodb-1.3.4.tgz .
@@ -113,6 +114,18 @@ RUN mkdir /var/run/sshd
 #    && ln -s /usr/local/node/bin/npm  /usr/local/bin/npm \
 #    && ln -s /usr/local/node/bin/cnpm  /usr/local/bin/cnpm 
 
+
+#swoole 线上安装
+
+RUN git clone https://gitee.com/swoole/swoole.git swoole;
+
+RUN cd swoole \
+    && phpize \
+    && ./configure --enable-openssl \
+    && make \
+    && make install \
+    && cd .. \
+    && docker-php-ext-enable swoole
 
 EXPOSE 22 9000
 

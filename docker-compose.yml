@@ -1,16 +1,16 @@
 version: '3'
 services:
-    workspace:
-        container_name: workspace
-        privileged: true
-        build: ./workspace
-        networks:
-            - app_net
-        volumes:
-            - ${WORK_DIR}:/data
-            - ./workspace/etc/supervisord.conf:/etc/supervisord.conf
-        ports:
-            - "2222:22"
+    #workspace:
+    #    container_name: workspace
+    #    privileged: true
+    #    build: ./workspace
+    #    networks:
+    #        - app_net
+    #    volumes:
+    #        - ${WORK_DIR}:/data
+    #        - ./workspace/etc/supervisord.conf:/etc/supervisord.conf
+    #    ports:
+    #        - "2222:22"
     mariadb:
         container_name: mariadb
         privileged: true
@@ -19,8 +19,8 @@ services:
             - "3306:3306"
         volumes:
             - mysql-data:/data/mysql
-            - ./mariadb/conf/my.cnf:/etc/mysql/my.cnf
-              #- ./mariadb/etc/supervisor:/etc/supervisor
+            - "./mariadb/conf/my.cnf:/etc/mysql/my.cnf"
+            - "./mariadb/etc/supervisor:/etc/supervisor"
         environment:
             - MYSQL_ROOT_PASSWORD=123456
         networks:
@@ -36,7 +36,7 @@ services:
             - ./php-fpm/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         depends_on:
-            - workspace
+            #- workspace
             - mariadb
         ports:
             - "9100:9000"
@@ -57,8 +57,8 @@ services:
             - ${WORK_DIR}:/data
         ports:
             - "80-99:80-99"
-        depends_on:
-            - workspace
+              #depends_on:
+              #- workspace
         links:
             - php-fpm
         networks:
