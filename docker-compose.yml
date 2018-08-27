@@ -1,16 +1,5 @@
 version: '3'
 services:
-    #workspace:
-    #    container_name: workspace
-    #    privileged: true
-    #    build: ./workspace
-    #    networks:
-    #        - app_net
-    #    volumes:
-    #        - ${WORK_DIR}:/data
-    #        - ./workspace/etc/supervisord.conf:/etc/supervisord.conf
-    #    ports:
-    #        - "2222:22"
     mariadb:
         container_name: mariadb
         privileged: true
@@ -132,6 +121,46 @@ services:
         ports:
             - "5601:5601"
 
+    c0:
+        build: ./consul
+        container_name: c0
+        privileged: true
+        networks:
+            - app_net
+        volumes:
+            - ./consul/c0/etc/supervisord.d:/etc/supervisord.d
+            - ./consul/c0/etc/consul.d:/etc/consul.d
+            - ${WORK_DIR}:/data
+        ports:
+            - "10220:22"
+            - "7100:7100"
+
+    c1:
+        build: ./consul
+        container_name: c1
+        privileged: true
+        networks:
+        - app_net
+        volumes:
+        - ./consul/c1/etc/supervisord.d:/etc/supervisord.d
+        - ./consul/c1/etc/consul.d:/etc/consul.d
+        - ${WORK_DIR}:/data
+        ports:
+        - "10221:22"
+        - "7101:7100"
+    c2:
+        build: ./consul
+        container_name: c2
+        privileged: true
+        networks:
+        - app_net
+        volumes:
+        - ./consul/c2/etc/supervisord.d:/etc/supervisord.d
+        - ./consul/c2/etc/consul.d:/etc/consul.d
+        - ${WORK_DIR}:/data
+        ports:
+        - "10222:22"
+        - "7102:7100"
 networks:
     app_net:
         external: true

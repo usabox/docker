@@ -1,4 +1,7 @@
-copy ~/.ssh/* .\workspace\
-copy ~/.ssh/* .\php-fpm\
-copy ~/.ssh/* .\nginx\
-copy ~/.ssh/* .\mariadb\
+cd /d %~dp0
+
+xcopy %USERPROFILE%\.ssh %~dp0workspace\ /Y
+
+xcopy %USERPROFILE%\.ssh %~dp0consul\ /Y
+
+pause
