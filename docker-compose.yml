@@ -134,6 +134,8 @@ services:
         ports:
             - "10220:22"
             - "7100:7100"
+            - "8500:8500"
+            - "8600:8600"
 
     c1:
         build: ./consul
@@ -148,6 +150,8 @@ services:
         ports:
         - "10221:22"
         - "7101:7100"
+        - "8501:8500"
+        - "8601:8600"
     c2:
         build: ./consul
         container_name: c2
@@ -161,6 +165,8 @@ services:
         ports:
         - "10222:22"
         - "7102:7100"
+        - "8502:8500"
+        - "8602:8600"
 networks:
     app_net:
         external: true

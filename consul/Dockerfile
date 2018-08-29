@@ -5,7 +5,7 @@ RUN yum install wget -y
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/epel/epel-release-latest-7.noarch.rpm \
     && rpm -ivh epel-release-latest-7.noarch.rpm
 
-RUN yum install supervisor openssh-server unzip -y
+RUN yum install supervisor openssh-server unzip bind-utils -y
 
 
 ADD id_rsa /tmp/id_rsa
