@@ -128,7 +128,7 @@ services:
         networks:
             - app_net
         volumes:
-            - ./consul/c0/etc/supervisord.d:/etc/supervisord.d
+            - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
             - ./consul/c0/etc/consul.d:/etc/consul.d
             - ${WORK_DIR}:/data
         ports:
@@ -144,7 +144,7 @@ services:
         networks:
         - app_net
         volumes:
-        - ./consul/c1/etc/supervisord.d:/etc/supervisord.d
+        - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
         - ./consul/c1/etc/consul.d:/etc/consul.d
         - ${WORK_DIR}:/data
         ports:
@@ -159,7 +159,7 @@ services:
         networks:
         - app_net
         volumes:
-        - ./consul/c2/etc/supervisord.d:/etc/supervisord.d
+        - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
         - ./consul/c2/etc/consul.d:/etc/consul.d
         - ${WORK_DIR}:/data
         ports:

@@ -42,8 +42,14 @@ RUN git clone https://github.com/phpredis/phpredis \
     && cd .. \
     && docker-php-ext-enable redis 
 
-RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');" \
-    && php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com \
+
+RUN apt-get install wget
+
+RUN wget https://getcomposer.org/composer.phar \
+    && chmod +x composer.phar \
+    && mv composer.phar /usr/bin/composer \
+#    && php -r "unlink('composer.phar');" \
+    && php composer.phar config -g repo.packagist composer https://packagist.laravel-china.org \
     && mv composer.phar /usr/bin/composer
 
 #RUN php -r "copy('https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.xz','node.tar.xz');"\
@@ -83,11 +89,11 @@ RUN cd  mongodb-1.3.4 \
         && docker-php-ext-enable mongodb\
         && cd ..
 
-RUN git clone https://github.com/xdebug/xdebug \
-    && cd xdebug \
-    && ./rebuild.sh \
-    && docker-php-ext-enable xdebug\
-    && cd ..
+#RUN git clone https://github.com/xdebug/xdebug \
+#    && cd xdebug \
+#    && ./rebuild.sh \
+#    && docker-php-ext-enable xdebug\
+#    && cd ..
 
 #RUN  pecl install mongodb \
 #        && docker-php-ext-enable mongodb
@@ -127,6 +133,14 @@ RUN cd swoole \
     && make install \
     && cd .. \
     && docker-php-ext-enable swoole
+
+RUN apt-get install -y unzip
+
+#安装 consul
+RUN cd ~ &&  wget https://releases.hashicorp.com/consul/1.2.2/consul_1.2.2_linux_amd64.zip \
+    && unzip consul_1.2.2_linux_amd64.zip
+
+RUN mv ~/consul /usr/bin
 
 EXPOSE 22 9000
 
