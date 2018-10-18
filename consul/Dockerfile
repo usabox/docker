@@ -45,7 +45,7 @@ RUN mkdir /root/.ssh \
         && cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys \
         && cat /tmp/id_rsa.pub >> /root/.ssh/id_rsa.pub \
         && cat /tmp/id_rsa >> /root/.ssh/id_rsa\
-        ** rm -f /tmp/id_rsa* \
+        && rm -f /tmp/id_rsa* \
         && chmod 644 /root/.ssh/authorized_keys /root/.ssh/id_rsa.pub \
         && chmod 400 /root/.ssh/id_rsa \
         && mkdir /var/run/sshd
