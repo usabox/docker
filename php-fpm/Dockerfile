@@ -14,6 +14,7 @@ RUN \
         unzip \
         tar \
         git \
+        wget \
     && apt-get autoremove \
     && apt-get clean \
     && docker-php-ext-install -j$(nproc) iconv mcrypt pdo pdo_mysql\
@@ -43,14 +44,10 @@ RUN git clone https://github.com/phpredis/phpredis \
     && docker-php-ext-enable redis 
 
 
-RUN apt-get install wget
-
 RUN wget https://getcomposer.org/composer.phar \
     && chmod +x composer.phar \
     && mv composer.phar /usr/bin/composer \
-#    && php -r "unlink('composer.phar');" \
-    && php composer.phar config -g repo.packagist composer https://packagist.laravel-china.org \
-    && mv composer.phar /usr/bin/composer
+    && composer config -g repo.packagist composer https://packagist.laravel-china.org
 
 #RUN php -r "copy('https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.xz','node.tar.xz');"\
 #    && mkdir node && tar -xvf node.tar.xz -C ./node --strip-components 1 \
