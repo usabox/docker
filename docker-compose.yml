@@ -15,7 +15,7 @@ services:
         networks:
             - app_net
     php-fpm:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm:1.0.0
+        image: registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm:v1.0.1
         container_name: php-fpm
         privileged: true
         volumes:
