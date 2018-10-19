@@ -1,5 +1,10 @@
 ./nginx/logs/*
-    *.sw*
-    *.iml
-    .idea
-    .env
+*.sw*
+*.iml
+.idea
+.env
+
+**/id_rsa
+**/id_rsa.pub
+**/authorized_keys
+**/known_hosts
