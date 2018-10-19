@@ -1,5 +1,5 @@
 ./nginx/logs/*
-*.sw*
-*.iml
-.idea
-.env
+    *.sw*
+    *.iml
+    .idea
+    .env
