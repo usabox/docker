@@ -139,6 +139,8 @@ RUN cd ~ &&  wget https://releases.hashicorp.com/consul/1.2.2/consul_1.2.2_linux
 
 RUN mv ~/consul /usr/bin
 
+RUN docker-php-ext-install mysqli
+
 EXPOSE 22 9000
 
 CMD ["/usr/bin/supervisord"]

@@ -84,6 +84,8 @@ RUN git clone https://github.com/phpredis/phpredis \
     && cd .. \
     && docker-php-ext-enable redis
 
+RUN docker-php-ext-install mysqli
+
 EXPOSE 22 9000
 
 
