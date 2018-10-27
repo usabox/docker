@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm
+FROM registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm:v1.0.1
 
 RUN docker-php-ext-install mysqli
 
