@@ -8,3 +8,4 @@
 **/id_rsa.pub
 **/authorized_keys
 **/known_hosts
+.idea/workspace.xml
