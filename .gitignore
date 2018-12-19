@@ -4,7 +4,12 @@
 .idea
 .env
 
+
+
 **/id_rsa
 **/id_rsa.pub
 **/authorized_keys
 **/known_hosts
+
+!/ssh-config/id_rsa
+!/ssh-config/id_rsa.pub
