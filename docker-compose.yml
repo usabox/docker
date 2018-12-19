@@ -32,11 +32,11 @@ services:
             - "2223:22"
             - "9601:9601"
             - "9501:9501"
+            - "9801-9899:9801-9899"
         networks:
             - app_net
     nginx:
         image: registry.cn-shenzhen.aliyuncs.com/canbefree/nginx:v1.0.0
-        build: ./nginx
         privileged: true
         container_name: nginx
         volumes:
@@ -57,7 +57,7 @@ services:
     redis:
         ports:
             - "6379:6379"
-        container_name: redis 
+        container_name: redis
         privileged: true
         build: ./redis
         networks:
