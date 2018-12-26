@@ -15,7 +15,7 @@ services:
         networks:
             - app_net
     php-fpm:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm:v1.0.2
+        build: ./php-fpm
         container_name: php-fpm
         privileged: true
         volumes:
@@ -32,11 +32,10 @@ services:
             - "2223:22"
             - "9601:9601"
             - "9501:9501"
-            - "9801-9899:9801-9899"
         networks:
             - app_net
     nginx:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/nginx:v1.0.0
+        build: ./nginx
         privileged: true
         container_name: nginx
         volumes:
@@ -46,12 +45,11 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "80-99:80-99"
-        depends_on:
-            - php-fpm
+            - "81-99:81-99"
+              #depends_on:
               #- workspace
-#        links:
-#            - php-fpm
+        links:
+            - php-fpm
         networks:
             - app_net
     redis:
@@ -124,7 +122,7 @@ services:
             - "5601:5601"
 
     c0:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
+        build: ./consul
         container_name: c0
         privileged: true
         networks:
@@ -140,7 +138,7 @@ services:
             - "8600:8600"
 
     c1:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
+        build: ./consul
         container_name: c1
         privileged: true
         networks:
@@ -155,7 +153,7 @@ services:
         - "8501:8500"
         - "8601:8600"
     c2:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
+        build: ./consul
         container_name: c2
         privileged: true
         networks:
@@ -168,7 +166,17 @@ services:
         - "10222:22"
         - "7102:7100"
         - "8502:8500"
-        - "8602:8600"
+
+    node:
+        build: ./node
+        container_name: node
+        privileged: true
+        networks:
+        - app_net
+        volumes:
+        - ./node/etc/supervisor:/etc/supervisor
+        - ${WORK_DIR}:/data
+
 networks:
     app_net:
         external: true
