@@ -1,4 +1,4 @@
-FROM node:8.14.1
+FROM node:10.14.2
 
 #ADD ./etc/apt/sources.list /etc/apt/sources.list
 
@@ -10,8 +10,8 @@ RUN apt-get install -y supervisor openssh-server --allow-unauthenticated
 RUN usermod -s /bin/bash root
 
 
-ADD ./ssh-config/id_rsa /tmp/id_rsa
-ADD ./ssh-config/id_rsa.pub /tmp/id_rsa.pub
+ADD id_rsa /tmp/id_rsa
+ADD id_rsa.pub /tmp/id_rsa.pub
 
 RUN mkdir /root/.ssh
 
@@ -25,6 +25,6 @@ RUN rm -f /tmp/id_rsa* \
 
 RUN mkdir /var/run/sshd
 
-EXPOSE 22
+EXPOSE 22 80 81 82
 
 CMD ["/usr/bin/supervisord"]
