@@ -176,7 +176,14 @@ services:
         volumes:
         - ./node/etc/supervisor:/etc/supervisor
         - ${WORK_DIR}:/data
-
+    kafka:
+        build: ./kafka
+        container_name: kafka
+        privileged: true
+        networks:
+        - app_net
+        volumes:
+        - ${WORK_DIR}:/data
 networks:
     app_net:
         external: true
