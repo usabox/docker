@@ -45,7 +45,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "80-99:80-99"
+            - "81-99:81-99"
               #depends_on:
               #- workspace
         links:
@@ -55,7 +55,7 @@ services:
     redis:
         ports:
             - "6379:6379"
-        container_name: redis 
+        container_name: redis
         privileged: true
         build: ./redis
         networks:
@@ -166,15 +166,17 @@ services:
         - "10222:22"
         - "7102:7100"
         - "8502:8500"
-        - "8602:8600"
-    kafka:
-        build: ./kafka
-        container_name: kafka
+
+    node:
+        build: ./node
+        container_name: node
         privileged: true
         networks:
         - app_net
         volumes:
+        - ./node/etc/supervisor:/etc/supervisor
         - ${WORK_DIR}:/data
+
 networks:
     app_net:
         external: true

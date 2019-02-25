@@ -1,4 +1,4 @@
-FROM nginx
+FROM node:10.14.2
 
 #ADD ./etc/apt/sources.list /etc/apt/sources.list
 
