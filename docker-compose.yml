@@ -46,7 +46,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "81-99:81-99"
+            - "80-99:80-99"
         depends_on:
             - php-fpm
               #- workspace
