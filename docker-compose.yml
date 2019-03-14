@@ -24,6 +24,7 @@ services:
             - ./php-fpm/etc/php/php.ini:/usr/local/etc/php/php.ini
             - ./php-fpm/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
+            - ${LOG_DIR}/php:/phplogs
         depends_on:
             #- workspace
             - mariadb
