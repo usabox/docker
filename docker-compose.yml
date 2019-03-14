@@ -24,6 +24,7 @@ services:
             - ./php-fpm/etc/php/php.ini:/usr/local/etc/php/php.ini
             - ./php-fpm/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
+            - ${LOG_DIR}/php:/phplogs
         depends_on:
             #- workspace
             - mariadb
@@ -46,9 +47,7 @@ services:
             - ${WORK_DIR}:/data
         ports:
             - "81-99:81-99"
-              #depends_on:
-              #- workspace
-        links:
+        depends_on:
             - php-fpm
         networks:
             - app_net
