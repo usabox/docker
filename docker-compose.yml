@@ -29,11 +29,31 @@ services:
             #- workspace
             - mariadb
         ports:
-            - "9100:9000"
+#            - "9100:9000"
             - "2223:22"
             - "9601:9601"
             - "9501:9501"
             - "9801-9899:9801-9899"
+        networks:
+            - app_net
+    php-fpm5:
+        build:
+            context: ./php-fpm
+            dockerfile: Dockerfile55
+        container_name: php-fpm5
+        privileged: true
+        volumes:
+            - ./php-fpm/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf
+            - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
+            - ./php-fpm/etc/php/php.ini:/usr/local/etc/php/php.ini
+            - ./php-fpm/etc/supervisor:/etc/supervisor
+            - ${WORK_DIR}:/data
+            - ${LOG_DIR}/php:/phplogs
+        depends_on:
+            #- workspace
+            - mariadb
+        ports:
+            - "2224:22"
         networks:
             - app_net
     nginx:
@@ -48,8 +68,8 @@ services:
             - ${WORK_DIR}:/data
         ports:
             - "81-99:81-99"
-        depends_on:
-            - php-fpm
+#        depends_on:
+#            - php-fpm
               #- workspace
 #        links:
 #            - php-fpm
