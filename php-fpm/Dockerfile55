@@ -147,6 +147,19 @@ RUN apt-get install -y unzip
 
 RUN docker-php-ext-install mysqli
 
+COPY xdebug-2.5.5.tgz xdebug-2.5.5.tgz
+
+RUN tar xvfz xdebug-2.5.5.tgz \
+    && cd xdebug-2.5.5 \
+    && phpize \
+    && ./configure \
+    && make \
+    && make install \
+    && cd ..
+
+RUN docker-php-ext-enable xdebug
+
+
 EXPOSE 22 9000
 
 CMD ["/usr/bin/supervisord"]
