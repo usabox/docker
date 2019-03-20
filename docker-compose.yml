@@ -35,6 +35,26 @@ services:
             - "9501:9501"
         networks:
             - app_net
+    php-fpm5:
+        build:
+            context: ./php-fpm
+            dockerfile: Dockerfile55
+        container_name: php-fpm5
+        privileged: true
+        volumes:
+            - ./php-fpm/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf
+            - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
+            - ./php-fpm/etc/php/php55.ini:/usr/local/etc/php/php.ini
+            - ./php-fpm/etc/supervisor:/etc/supervisor
+            - ${WORK_DIR}:/data
+            - ${LOG_DIR}/php:/phplogs
+        depends_on:
+            #- workspace
+            - mariadb
+        ports:
+            - "2224:22"
+        networks:
+            - app_net
     nginx:
         build: ./nginx
         privileged: true
@@ -46,7 +66,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "81-99:81-99"
+            - "80-99:80-99"
         depends_on:
             - php-fpm
         networks:
