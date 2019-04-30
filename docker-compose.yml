@@ -67,7 +67,7 @@ services:
             - ${WORK_DIR}:/data
         ports:
             - "80-99:80-99"
-              - "443:443"
+            - "443:443"
         depends_on:
             - php-fpm
         networks:
