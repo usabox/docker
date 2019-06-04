@@ -67,6 +67,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
+            - "80:80"
             - "81-99:81-99"
             - "443:443"
 #        links:
