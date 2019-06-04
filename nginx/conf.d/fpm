@@ -11,5 +11,5 @@
                 fastcgi_index  index.php;
                 fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
                 include        fastcgi_params;
-                fastcgi_param REMOTE_ADDR "172.30.20.209";
+                fastcgi_param REMOTE_ADDR "10.5.23.35";
         }
