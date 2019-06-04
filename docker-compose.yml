@@ -63,6 +63,7 @@ services:
         volumes:
             - ./nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./nginx/conf.d:/etc/nginx/conf.d
+            - ./nginx/mingyuan.d:/etc/nginx/mingyuan.d
             - ${LOG_DIR}/nginx/:/wwwlogs/
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
