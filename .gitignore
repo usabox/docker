@@ -8,7 +8,6 @@
 **/id_rsa.pub
 **/authorized_keys
 **/known_hosts
-.idea/workspace.xml
 
 !/ssh-config/id_rsa
 !/ssh-config/id_rsa.pub

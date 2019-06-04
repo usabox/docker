@@ -1,0 +1,8 @@
+Host php-fpm
+HostName localhost
+port 2223
+User root
+IdentityFile ~/.ssh/docker.pem
+
+
+
