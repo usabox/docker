@@ -15,3 +15,14 @@ ln -s $(pwd)/apps /www
 ```
 docker-composer up nginx
 ```
+
+
+### branch 分支介绍
+
+master 用于发布 阿里云镜像
+
+modify 修改提交分支： 来源 yun 分支
+
+image  公司开发特性分支
+
+yun   云服务器特性分支
