@@ -35,6 +35,10 @@ services:
             - "9501:9501"
         networks:
             - app_net
+    php-fpm7:
+        build:
+            context: ./php-fpm
+            dockerfile: Dockerfile7
     php-fpm5:
         build:
             context: ./php-fpm
