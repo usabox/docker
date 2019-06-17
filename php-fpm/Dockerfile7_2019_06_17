@@ -1,0 +1,60 @@
+from php:7.3-fpm
+
+MAINTAINER xieyutian "xieyutianhn@gmail.com"
+
+#软件源获取
+RUN apt-get update 
+
+#安装sshd并启动
+RUN apt-get install openssh-server -y 
+
+# 配置无密码登陆
+ADD id_rsa /tmp/id_rsa
+ADD id_rsa.pub /tmp/id_rsa.pub
+
+RUN mkdir /root/.ssh \
+&& cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys \
+&& cat /tmp/id_rsa.pub >> /root/.ssh/id_rsa.pub \
+&& cat /tmp/id_rsa >> /root/.ssh/id_rsa \
+&& rm -f /tmp/id_rsa* \
+&& chmod 644 /root/.ssh/authorized_keys /root/.ssh/id_rsa.pub \
+&& chmod 400 /root/.ssh/id_rsa
+
+#composer 安装
+RUN curl -O https://getcomposer.org/composer.phar \
+&& chmod +x composer.phar \
+&& mv composer.phar /usr/bin/composer \
+&& composer config -g repo.packagist composer https://packagist.laravel-china.org
+
+
+#swoole 线上安装
+RUN apt-get install git -y \
+&&  git clone https://gitee.com/swoole/swoole.git swoole \
+&& apt-get install libssl-dev -y \
+&& cd swoole \
+&& phpize \
+&& ./configure --enable-openssl \
+&& make \
+&& make install \
+&& cd .. \
+&& docker-php-ext-enable swoole \
+&& rm -rf swoole
+
+# xdebug 安装
+
+RUN git clone https://github.com/xdebug/xdebug \
+&& cd xdebug \
+&& ./rebuild.sh \
+&& docker-php-ext-enable xdebug \
+&& cd ..\
+&& rm -rf xdebug
+
+# 开启 mysqli 
+RUN docker-php-ext-install mysqli
+
+# 安装 supervisor
+RUN apt-get install supervisor -y \
+&& mkdir /run/sshd
+
+CMD ["/usr/bin/supervisord"]
+

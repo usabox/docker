@@ -1,15 +1,2 @@
-from php:7.3-fpm
 
-MAINTAINER xieyutian "xieyutianhn@gmail.com"
-
-#软件源获取
-RUN apt-get update 
-
-#安装sshd并启动
-RUN apt-get install openssh-server -y 
-
-RUN /usr/sbin/sshd
-
-
-
-
+from registry.cn-shenzhen.aliyuncs.com/canbefree/php-fpm7:v1.0.3
