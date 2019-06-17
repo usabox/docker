@@ -67,11 +67,16 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
+<<<<<<< HEAD
             - "80:80"
             - "81-99:81-99"
             - "443:443"
         depends_on:
             - php-fpm
+=======
+            - "${NGINX_PORT}:${NGINX_PORT}"
+            - "443:443"
+>>>>>>> modify
         networks:
             - app_net
     redis:
@@ -130,8 +135,6 @@ services:
             - ./logstash/patterns:/patterns
         ports:
             - "5044:5044"
-        links:
-            - elasticsearch
     kibana:
         build: ./kibana
         container_name: kibana
@@ -142,6 +145,7 @@ services:
             - elasticsearch
         ports:
             - "5601:5601"
+<<<<<<< HEAD
 
     c0:
         build: ./consul
@@ -189,6 +193,8 @@ services:
         - "7102:7100"
         - "8502:8500"
 
+=======
+>>>>>>> modify
     node:
         build: ./node
         container_name: node
