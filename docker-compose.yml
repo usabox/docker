@@ -68,13 +68,8 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "81-99:81-99"
+            - "${NGINX_PORT}:${NGINX_PORT}"
             - "443:443"
-#        depends_on:
-#            - php-fpm
-              #- workspace
-#        links:
-#            - php-fpm
         networks:
             - app_net
     redis:
@@ -133,8 +128,6 @@ services:
             - ./logstash/patterns:/patterns
         ports:
             - "5044:5044"
-        links:
-            - elasticsearch
     kibana:
         build: ./kibana
         container_name: kibana
@@ -145,53 +138,6 @@ services:
             - elasticsearch
         ports:
             - "5601:5601"
-
-    c0:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
-        container_name: c0
-        privileged: true
-        networks:
-            - app_net
-        volumes:
-            - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
-            - ./consul/c0/etc/consul.d:/etc/consul.d
-            - ${WORK_DIR}:/data
-        ports:
-            - "10220:22"
-            - "7100:7100"
-            - "8500:8500"
-            - "8600:8600"
-
-    c1:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
-        container_name: c1
-        privileged: true
-        networks:
-        - app_net
-        volumes:
-        - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
-        - ./consul/c1/etc/consul.d:/etc/consul.d
-        - ${WORK_DIR}:/data
-        ports:
-        - "10221:22"
-        - "7101:7100"
-        - "8501:8500"
-        - "8601:8600"
-    c2:
-        image: registry.cn-shenzhen.aliyuncs.com/canbefree/consul:1.0.1
-        container_name: c2
-        privileged: true
-        networks:
-        - app_net
-        volumes:
-        - ./consul/c0/etc/supervisord.d:/etc/supervisor/conf.d
-        - ./consul/c2/etc/consul.d:/etc/consul.d
-        - ${WORK_DIR}:/data
-        ports:
-        - "10222:22"
-        - "7102:7100"
-        - "8502:8500"
-
     node:
         build: ./node
         container_name: node
