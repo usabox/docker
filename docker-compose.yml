@@ -67,7 +67,7 @@ services:
             - ./nginx/etc/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
         ports:
-            - "${NGINX_PORT}:${NGINX_PORT}"
+            - ${NGINX_PORT}
             - "443:443"
         networks:
             - app_net
