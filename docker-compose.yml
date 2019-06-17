@@ -34,10 +34,10 @@ services:
         container_name: php-fpm5
         privileged: true
         volumes:
-            - ./php-fpm/etc/php-fpm.conf:/usr/local/etc/php-fpm.conf
-            - ./php-fpm/etc/php-fpm.d/:/usr/local/etc/php-fpm.d
-            - ./php-fpm/etc/php/php55.ini:/usr/local/etc/php/php.ini
-            - ./php-fpm/etc/supervisor:/etc/supervisor
+            - ./php-fpm/etc5/php-fpm.conf:/usr/local/etc/php-fpm.conf
+            - ./php-fpm/etc5/php-fpm.d/:/usr/local/etc/php-fpm.d
+            - ./php-fpm/etc5/php/php55.ini:/usr/local/etc/php/php.ini
+            - ./php-fpm/etc5/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
             - ${LOG_DIR}/php:/phplogs
         depends_on:
