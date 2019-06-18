@@ -2,10 +2,9 @@ FROM php:5.5-fpm
 
 MAINTAINER xieyutian "xieyutianhn@gmail.com"
 
-#添加ubuntu源
-RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse" \
-> /etc/apt/sources.list
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main\n" > /etc/apt/sources.list
 
+RUN cat /etc/apt/sources.list
 
 #软件源获取
 RUN apt-get update 
@@ -29,26 +28,13 @@ RUN mkdir /root/.ssh \
 RUN curl -O https://getcomposer.org/composer.phar \
 && chmod +x composer.phar \
 && mv composer.phar /usr/bin/composer \
-&& composer config -g repo.packagist composer https://packagist.laravel-china.org
-
-
-#swoole 线上安装
-RUN apt-get install git -y \
-&&  git clone https://gitee.com/swoole/swoole.git swoole \
-&& apt-get install libssl-dev -y \
-&& cd swoole \
-&& phpize \
-&& ./configure --enable-openssl \
-&& make \
-&& make install \
-&& cd .. \
-&& docker-php-ext-enable swoole \
-&& rm -rf swoole
+&& composer config -g repo.packagist composer https://packagist.laravel-china.org \
+&& apt-get install git -y
 
 # xdebug 安装
-
 RUN git clone https://github.com/xdebug/xdebug \
 && cd xdebug \
+&& git checkout xdebug_2_5 \
 && ./rebuild.sh \
 && docker-php-ext-enable xdebug \
 && cd ..\
