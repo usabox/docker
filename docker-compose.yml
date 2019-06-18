@@ -18,15 +18,19 @@ services:
         build:
             context: ./php-fpm
             dockerfile: Dockerfile7
+        container_name: php-fpm7
+        privileged: true
         volumes:
             - ./php-fpm/etc7/php-fpm.conf:/usr/local/etc/php-fpm.conf
             - ./php-fpm/etc7/php-fpm.d/:/usr/local/etc/php-fpm.d
             - ./php-fpm/etc7/php/php7.ini:/usr/local/etc/php/php.ini
-            - ./php-fpm/etc/supervisor:/etc/supervisor
+            - ./php-fpm/etc7/supervisor:/etc/supervisor
             - ${WORK_DIR}:/data
             - ${LOG_DIR}/php:/phplogs
         ports:
             - "2225:22"
+        networks:
+            - app_net
     php-fpm5:
         build:
             context: ./php-fpm
